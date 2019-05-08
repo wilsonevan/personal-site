@@ -42,17 +42,15 @@ body {
     /* font-family: Montserrat, san-serif; */
     letter-spacing: 1.25px !important;
     font-weight: 300 !important;
-    color: #424242 !important;
     background: #F2F2F2 !important;
     color: ${globalColors.PrimaryGrey};
 }
 
 h1 {
     letter-spacing: 2px !important;
-    font-weight: 300 !important;
-    color: #FFDBA7;
-    font-size: 3rem !important;
-    padding-bottom: 1rem;
+    font-weight: 900 !important;
+    font-size: 4rem !important;
+    padding-bottom: 0.2rem;
     color: ${globalColors.PrimaryTeal};
     /* border-bottom: 1px solid #349dc4; */
 }
