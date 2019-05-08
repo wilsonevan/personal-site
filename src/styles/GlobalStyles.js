@@ -3,18 +3,29 @@ import { createGlobalStyle } from "styled-components";
 /*/// STYLES META DATA /////
 
 COLORS______________________
+  PrimaryWhite: #F2F2F2
+  PrimaryBlack: #1C1C1C
+  PrimaryGrey: #424242
+  PrimaryRed: #FFC2A7
+  PrimaryOrange: #FFDBA7
+  PrimaryTeal: #a3f9d8
+  PrimaryBlue: #A9D3F8
+
+
+FONTS_______________________
+Montserrat: (weights) 300 & 600 
+
+//////////////////////////*/
+
+const globalColors = {
   PrimaryWhite: "#F2F2F2",
   PrimaryBlack: "#1C1C1C",
   PrimaryGrey: "#424242",
   PrimaryRed: "#FFC2A7",
   PrimaryOrange: "#FFDBA7",
   PrimaryTeal: "#a3f9d8",
-  PrimaryBlue: "#A9D3F8"
-
-FONTS_______________________
-Montserrat: (weights) 300 & 600 
-
-//////////////////////////*/
+  PrimaryBlue: "#A9D3F8",
+};
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -33,14 +44,16 @@ body {
     font-weight: 300 !important;
     color: #424242 !important;
     background: #F2F2F2 !important;
+    color: ${globalColors.PrimaryGrey};
 }
 
 h1 {
     letter-spacing: 2px !important;
     font-weight: 300 !important;
-    color: ${props => props.theme.primaryOrange};
+    color: #FFDBA7;
     font-size: 3rem !important;
     padding-bottom: 1rem;
+    color: ${globalColors.PrimaryTeal};
     /* border-bottom: 1px solid #349dc4; */
 }
 
@@ -50,6 +63,7 @@ input, select, textarea {
     /* font-family: Montserrat, san-serif; */
     font-weight: 300 !important;
     letter-spacing: 1.25px !important;
+    color: ${globalColors.PrimaryGrey};
 }
 `;
 

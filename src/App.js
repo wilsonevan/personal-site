@@ -1,7 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./styles/GlobalStyles";
-import { ThemeProvider } from "styled-components";
 import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
 import Footer from "./components/Footer";
@@ -15,7 +14,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route component={NoMatch} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
