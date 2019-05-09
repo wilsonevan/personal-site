@@ -21,7 +21,7 @@ const Profile = () => {
           <ProfileName leftIndent={"3rem;"}>Wilson</ProfileName>
         </NameContainer>
         <AboutContainer>
-          <AboutText>Here is something about me.</AboutText>
+          <AboutText fontWeight={"bold"}>Here is something about me.</AboutText>
           <AboutText>Here is more about me.</AboutText>
         </AboutContainer>
       </ProfileContainer>
@@ -81,6 +81,8 @@ const AboutContainer = styled.div`
   padding: 3rem;
 `;
 
-const AboutText = styled.h3``;
+const AboutText = styled.h3`
+  font-weight: ${props => props.fontWeight || "lighter"} !important;
+`;
 
 export default Profile;

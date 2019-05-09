@@ -1,17 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar";
-import image1 from "../images/barca_4_cropped.jpg";
-import profileImage from "../images/evan_profile.jpg";
+import Navbar from "../Navbar";
+import image1 from "../../images/barca_4_cropped.jpg";
 import {
   PageContainer,
   PrimaryText,
   SecondaryText,
-  TopContainer,
-  SecondContainer
-} from "../styles/GlobalComponents";
-import { globalColors } from "../styles/GlobalStyles";
-import Profile from './home/Profile'
+  TopContainer
+} from "../../styles/GlobalComponents";
+import { globalColors } from "../../styles/GlobalStyles";
+import Profile from "./Profile";
 
 const Home = () => {
   return (
@@ -29,6 +27,7 @@ const Home = () => {
           </DescriptionContainer>
         </TopContainer>
         <Profile />
+        
       </PageContainer>
     </>
   );
@@ -66,7 +65,5 @@ const DescriptionContainer = styled.div`
   width: 100%;
   margin-bottom: 1rem;
 `;
-
-
 
 export default Home;
