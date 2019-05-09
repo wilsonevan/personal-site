@@ -26,8 +26,8 @@ export const SecondContainer = styled.section`
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
-  align-items: left;
-  height: 80vh;
+  /* align-items: left; */
+  min-height: 80vh;
   width: 100%;
   background-position: center;
   background-size: cover;
