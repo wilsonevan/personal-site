@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { globalColors } from "./GlobalStyles";
 
 export const PageContainer = styled.div`
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 export const TopContainer = styled.div`
@@ -16,6 +18,21 @@ export const TopContainer = styled.div`
   background-size: cover;
   background-attachment: fixed;
   border-bottom: #a9d3f8;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+`;
+
+export const SecondContainer = styled.div`
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: left;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-bottom: ${globalColors.PrimaryOrange};
   border-bottom-width: 3px;
   border-bottom-style: solid;
 `;

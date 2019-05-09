@@ -24,7 +24,7 @@ const globalColors = {
   PrimaryRed: "#FFC2A7",
   PrimaryOrange: "#FFDBA7",
   PrimaryTeal: "#a3f9d8",
-  PrimaryBlue: "#A9D3F8",
+  PrimaryBlue: "#A9D3F8"
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -65,4 +65,4 @@ input, select, textarea {
 }
 `;
 
-export { GlobalStyles };
+export { GlobalStyles, globalColors };
