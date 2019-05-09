@@ -11,7 +11,7 @@ import {
 } from "../../styles/GlobalComponents";
 import { globalColors } from "../../styles/GlobalStyles";
 
-import Navbar from "../Navbar";
+import Navbar from "./Navbar";
 import Profile from "./Profile";
 import Portfolio from "./Portfolio";
 
