@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import scrollToComponent from "react-scroll-to-component";
+import Particles from "react-particles-js";
+import { particleParams, particleStyles } from "../../styles/ParticlesStyles";
 
 import styled from "styled-components";
 import image1 from "../../images/barca_4_cropped.jpg";
@@ -35,6 +37,7 @@ class Home extends React.Component {
               this.Top = section;
             }}
           >
+            <Particles params={particleParams} style={particleStyles} />
             <TopContainer>
               <CircleImage src={image1} alt="CCLogo" />
               <DescriptionContainer>
