@@ -34,7 +34,7 @@ h1 {
     font-weight: 1200 !important;
     font-size: 4rem !important;
     padding-bottom: 0.2rem;
-    color: ${globalColors.PrimaryTeal};
+    color: ${globalColors.PrimaryOrange};
     /* border-bottom: 1px solid #349dc4; */
 }
 

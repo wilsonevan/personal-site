@@ -38,7 +38,7 @@ export const SecondContainer = styled.section`
 `;
 
 export const PrimaryText = styled.h1`
-  color: #a9d3f8;
+  color: ${globalColors.PrimaryOrange};
   padding-bottom: 0.5rem;
   /* border-bottom: 1px solid #349dc4; */
 `;
