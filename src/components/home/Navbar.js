@@ -22,6 +22,7 @@ const Navbar = props => {
               duration: 1500
             })
           }
+          style={{maxWidth:'15rem'}}
         >
           <MenuItem>
             <Item>About Me</Item>
@@ -36,12 +37,15 @@ const Navbar = props => {
               duration: 1500
             })
           }
+          style={{maxWidth:'15rem'}}
         >
           <MenuItem>
             <Item>Portfolio</Item>
           </MenuItem>
         </Link>
-        <Link to="/">
+        <Link to="/"
+        style={{maxWidth:'15rem'}}
+        >
           <MenuItem>
             <Item>Contact</Item>
           </MenuItem>

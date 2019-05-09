@@ -18,6 +18,7 @@ const CardContainer = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
   padding: 0.5rem 1rem 0.5rem 1rem;
+  opacity: 0.8;
   background-color: ${globalColors.PrimaryGreen}
   `
 

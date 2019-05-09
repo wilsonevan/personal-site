@@ -5,40 +5,34 @@ import { globalColors } from "../../styles/GlobalStyles";
 // import Iframe from "react-iframe";
 import ProjectView from "./ProjectView";
 import beakrLogo from "../../images/beakr_logo.svg";
-import AGLogo from '../../images/AG LOGO Vector-COM.jpg'
+import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
 
 const Portfolio = () => {
   return (
-      <ProjectsContainer>
-        <PortfolioHeader>Portfolio</PortfolioHeader>
-        <EachProject>
-          <ProjectView
-            title={"Beaker LMS for Coding Bootcamps"}
-            github={"https://github.com/devpointlabs/beakr"}
-            url={"https://beakr-dpl.herokuapp.com/"}
-            instructions={[
-              "1. Remember you may need to wait 15s for the server to boot up.",
-              "2. Login as test@test.com to view teacher views.",
-              "3. Login as evanstudent@test.com to view student view."
-            ]}
-            logo={beakrLogo}
-            skills={[
-              "Reactjs",
-              "Ruby on Rails",
-            ]}
-          />
-          <ProjectView
-            title={"Audio Grenade Website"}
-            github={"https://github.com/wilsonevan/audio_grenade3"}
-            url={"https://dev-audio-grenade.netlify.com/"}
-            logo={AGLogo}
-            skills={[
-              "Reactjs",
-              "Ruby on Rails",
-            ]}
-          />
-        </EachProject>
-      </ProjectsContainer>
+    <ProjectsContainer>
+      <PortfolioHeader>Portfolio</PortfolioHeader>
+      <EachProject>
+        <ProjectView
+          title={"Beaker LMS for Coding Bootcamps"}
+          github={"https://github.com/devpointlabs/beakr"}
+          url={"https://beakr-dpl.herokuapp.com/"}
+          instructions={[
+            "1. Remember you may need to wait 15s for the server to boot up.",
+            "2. Login as test@test.com to view teacher views.",
+            "3. Login as evanstudent@test.com to view student view."
+          ]}
+          logo={beakrLogo}
+          skills={["Reactjs", "Ruby on Rails", "Raw SQL","PostgreSQL", "HTML/CSS", "Twilio", "Cloudinary", "Chart.js", "Devise", "Styled Components"]}
+        />
+        <ProjectView
+          title={"Audio Grenade Website"}
+          github={"https://github.com/wilsonevan/audio_grenade3"}
+          url={"https://dev-audio-grenade.netlify.com/"}
+          logo={AGLogo}
+          skills={["Reactjs","HTML/CSS", "BigCommerce", "Freshworks","Styled Components"]}
+        />
+      </EachProject>
+    </ProjectsContainer>
   );
 };
 

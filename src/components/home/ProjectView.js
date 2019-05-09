@@ -45,16 +45,20 @@ const ProjectView = props => {
 };
 
 const ProjectContainer = styled.div`
-  border: 1px solid ${globalColors.PrimaryBlue};
+  border-bottom: 5px solid ${globalColors.PrimaryBlue};
+  border-right: 3px solid ${globalColors.PrimaryBlue};
+  border-top: 1px solid ${globalColors.PrimaryBlue};
+  border-left: 1px solid ${globalColors.PrimaryBlue};
   border-radius: 0.5rem;
   margin: 3rem;
-  padding: 3rem;
+  padding: 0.5rem;
   height: 30rem;
   width: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
 
   :hover {
     background-color: ${globalColors.PrimaryBlue};
@@ -94,9 +98,10 @@ const Logo = styled.img`
 
 const SkillsContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem;
+  flex-wrap: wrap;
 `;
 
 const LinksContainer = styled.div`
@@ -124,8 +129,9 @@ const SupportLink = styled.a``;
 const LinkButton = styled.button`
   /* padding: 1rem; */
   background-color: ${globalColors.PrimaryGreen};
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.4rem;
   opacity: 0.8;
   font-size: 2rem;
 
