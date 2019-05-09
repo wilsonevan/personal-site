@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../images/cortona_creative_logo_OW_background.png";
+import logo from "../../images/cortona_creative_logo_no_background.png";
 import scrollToComponent from "react-scroll-to-component";
-import { globalColors } from "../styles/GlobalStyles";
-
+import { globalColors } from "../../styles/GlobalStyles";
 
 // import logo from "../images/logos/AG Grenade Only Transparent.svg";
 // import { Button, Icon, Sidebar, Menu } from "semantic-ui-react";
@@ -14,21 +13,32 @@ const Navbar = props => {
     <NavContainer>
       <NavMenu>
         <Logo src={logo} alt="CCLogo" />
-        <Link onClick={() =>
+        <Link
+          onClick={() =>
             scrollToComponent(props.refs[0], {
               offset: 0,
               align: "top",
               ease: "inOutCube",
               duration: 1500
             })
-          }>
+          }
+        >
           <MenuItem>
             <Item>About Us</Item>
           </MenuItem>
         </Link>
-        <Link to="/">
+        <Link
+          onClick={() =>
+            scrollToComponent(props.refs[1], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }
+        >
           <MenuItem>
-            <Item>Projects</Item>
+            <Item>Portfolio</Item>
           </MenuItem>
         </Link>
         <Link to="/">
@@ -40,14 +50,6 @@ const Navbar = props => {
     </NavContainer>
   );
 };
-
-// onClick={() =>
-//   scrollToComponent(props.refs[0], {
-//     offset: 0,
-//     align: "top",
-//     duration: 1500
-//   })
-// }
 
 const NavContainer = styled.div`
   position: absolute;
