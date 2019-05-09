@@ -81,6 +81,8 @@ const ProjectDetails = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
 `;
 
 const Logo = styled.img`
@@ -89,10 +91,12 @@ const Logo = styled.img`
   margin: 10px 16px 5px 16px;
 `;
 
+
 const SkillsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0.5rem;
 `;
 
 const LinksContainer = styled.div`

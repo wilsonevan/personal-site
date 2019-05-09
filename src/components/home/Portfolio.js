@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { SecondContainer } from "../../styles/GlobalComponents";
 import { globalColors } from "../../styles/GlobalStyles";
-import Iframe from "react-iframe";
+// import Iframe from "react-iframe";
 import ProjectView from "./ProjectView";
-import beakrLogo from "../../images/cortona_creative_logo_no_background.png";
+import beakrLogo from "../../images/beakr_logo.svg";
+import AGLogo from '../../images/AG LOGO Vector-COM.jpg'
 
 const Portfolio = () => {
   return (
@@ -30,7 +31,7 @@ const Portfolio = () => {
             title={"Audio Grenade Website"}
             github={"https://github.com/wilsonevan/audio_grenade3"}
             url={"https://dev-audio-grenade.netlify.com/"}
-            logo={beakrLogo}
+            logo={AGLogo}
             skills={[
               "Reactjs",
               "Ruby on Rails",
