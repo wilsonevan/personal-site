@@ -26,9 +26,16 @@ const Navbar = props => {
             <Item>About Us</Item>
           </MenuItem>
         </Link>
-        <Link to="/">
+        <Link onClick={() =>
+            scrollToComponent(props.refs[1], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }>
           <MenuItem>
-            <Item>Projects</Item>
+            <Item>Portfolio</Item>
           </MenuItem>
         </Link>
         <Link to="/">
@@ -40,14 +47,6 @@ const Navbar = props => {
     </NavContainer>
   );
 };
-
-// onClick={() =>
-//   scrollToComponent(props.refs[0], {
-//     offset: 0,
-//     align: "top",
-//     duration: 1500
-//   })
-// }
 
 const NavContainer = styled.div`
   position: absolute;

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
+import scrollToComponent from "react-scroll-to-component";
+
 import styled from "styled-components";
-import Navbar from "../Navbar";
 import image1 from "../../images/barca_4_cropped.jpg";
 import {
   PageContainer,
@@ -9,8 +10,10 @@ import {
   TopContainer
 } from "../../styles/GlobalComponents";
 import { globalColors } from "../../styles/GlobalStyles";
+
+import Navbar from "../Navbar";
 import Profile from "./Profile";
-import scrollToComponent from "react-scroll-to-component";
+import Portfolio from "./Portfolio";
 
 class Home extends React.Component {
   render() {
@@ -27,9 +30,11 @@ class Home extends React.Component {
               })
             }
           /> */}
-          <section ref={section => {
+          <section
+            ref={section => {
               this.Top = section;
-            }}>
+            }}
+          >
             <TopContainer>
               <CircleImage src={image1} alt="CCLogo" />
               <DescriptionContainer>
@@ -47,6 +52,13 @@ class Home extends React.Component {
             }}
           >
             <Profile />
+          </section>
+          <section
+            ref={section => {
+              this.Projects = section;
+            }}
+          >
+            <Portfolio />
           </section>
         </PageContainer>
       </>
