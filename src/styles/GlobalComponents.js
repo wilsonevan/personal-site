@@ -25,9 +25,9 @@ export const TopContainer = styled.div`
 export const SecondContainer = styled.div`
   display: flex;
   /* flex-direction: column; */
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: left;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background-position: center;
   background-size: cover;

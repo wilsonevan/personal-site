@@ -1,29 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
-/*/// STYLES META DATA /////
-
-COLORS______________________
-  PrimaryWhite: #F2F2F2
-  PrimaryBlack: #1C1C1C
-  PrimaryGrey: #424242
-  PrimaryRed: #FFC2A7
-  PrimaryOrange: #FFDBA7
-  PrimaryTeal: #a3f9d8
-  PrimaryBlue: #A9D3F8
-
-
-FONTS_______________________
-Montserrat: (weights) 300 & 600 
-
-//////////////////////////*/
-
 const globalColors = {
   PrimaryWhite: "#F2F2F2",
   PrimaryBlack: "#1C1C1C",
   PrimaryGrey: "#424242",
-  PrimaryRed: "#FFC2A7",
-  PrimaryOrange: "#FFDBA7",
-  PrimaryTeal: "#a3f9d8",
+  PrimaryRed: "#FFAEA8",
+  PrimaryOrange: "#FFDBA8",
+  PrimaryGreen: "#A5FAB4",
   PrimaryBlue: "#A9D3F8"
 };
 
@@ -48,7 +31,7 @@ body {
 
 h1 {
     letter-spacing: 2px !important;
-    font-weight: 900 !important;
+    font-weight: 1200 !important;
     font-size: 4rem !important;
     padding-bottom: 0.2rem;
     color: ${globalColors.PrimaryTeal};

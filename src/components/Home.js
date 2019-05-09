@@ -11,6 +11,7 @@ import {
   SecondContainer
 } from "../styles/GlobalComponents";
 import { globalColors } from "../styles/GlobalStyles";
+import Profile from './home/Profile'
 
 const Home = () => {
   return (
@@ -27,12 +28,7 @@ const Home = () => {
             </MySecondaryText>
           </DescriptionContainer>
         </TopContainer>
-        <SecondContainer>
-          <AboutText>About Us</AboutText>
-          <AboutContainer>
-            <ProfileImage src={profileImage} alt="profileImage" />
-          </AboutContainer>
-        </SecondContainer>
+        <Profile />
       </PageContainer>
     </>
   );
@@ -71,27 +67,6 @@ const DescriptionContainer = styled.div`
   margin-bottom: 1rem;
 `;
 
-const AboutText = styled(PrimaryText)`
-  color: ${globalColors.PrimaryRed};
-  margin-left: 3rem;
-  position: relative;
-  min-width: 400px;
-  max-height: 100px;
-  top: 400px;
-  left: 0;
 
-  /* Rotate from top left corner (not default) */
-  transform-origin: 0 0;
-  transform: rotate(270deg);
-`;
-
-const AboutContainer = styled.div``;
-const ProfileImage = styled.img`
-  height: 100vh;
-  width: auto;
-  opacity: 0.85;
-  position: relative;
-  right: 300px;
-`;
 
 export default Home;
