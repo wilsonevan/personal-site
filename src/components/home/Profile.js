@@ -37,6 +37,7 @@ const AboutHeader = styled(PrimaryText)`
   max-height: 100px;
   top: 400px;
   left: 0;
+  text-decoration: underline;
 
   /* Rotate from top left corner (not default) */
   transform-origin: 0% 0%;

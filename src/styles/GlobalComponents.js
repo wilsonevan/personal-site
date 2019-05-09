@@ -7,7 +7,7 @@ export const PageContainer = styled.div`
   justify-content: flex-start;
 `;
 
-export const TopContainer = styled.div`
+export const TopContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +22,7 @@ export const TopContainer = styled.div`
   border-bottom-style: solid;
 `;
 
-export const SecondContainer = styled.div`
+export const SecondContainer = styled.section`
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;

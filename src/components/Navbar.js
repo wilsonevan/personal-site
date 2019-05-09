@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/cortona_creative_logo_OW_background.png";
+import scrollToComponent from "react-scroll-to-component";
+import { globalColors } from "../styles/GlobalStyles";
+
 
 // import logo from "../images/logos/AG Grenade Only Transparent.svg";
 // import { Button, Icon, Sidebar, Menu } from "semantic-ui-react";
@@ -11,7 +14,14 @@ const Navbar = props => {
     <NavContainer>
       <NavMenu>
         <Logo src={logo} alt="CCLogo" />
-        <Link to="/">
+        <Link onClick={() =>
+            scrollToComponent(props.refs[0], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }>
           <MenuItem>
             <Item>About Us</Item>
           </MenuItem>
@@ -31,6 +41,14 @@ const Navbar = props => {
   );
 };
 
+// onClick={() =>
+//   scrollToComponent(props.refs[0], {
+//     offset: 0,
+//     align: "top",
+//     duration: 1500
+//   })
+// }
+
 const NavContainer = styled.div`
   position: absolute;
   top: 0rem;
@@ -40,10 +58,10 @@ const NavContainer = styled.div`
 const MenuItem = styled.div`
   float: left;
   font-size: 1.25rem;
+  z-index: 1;
 
   :hover {
     cursor: pointer;
-    color: red;
   }
 `;
 
@@ -52,14 +70,18 @@ const Item = styled.h2`
   text-align: center;
   padding: 10px 16px 5px 16px;
   text-decoration: none;
-  z-index: 1;
+  /* z-index: -10; */
+
+  :hover {
+    color: ${globalColors.PrimaryRed};
+    transition: 0.2s ease-in-out;
+  }
 `;
 
 const Logo = styled.img`
   height: auto;
   width: 8rem;
   margin: 10px 16px 5px 16px;
-
 `;
 
 const NavMenu = styled.div`
