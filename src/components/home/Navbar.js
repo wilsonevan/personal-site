@@ -43,7 +43,14 @@ const Navbar = props => {
             <Item>Portfolio</Item>
           </MenuItem>
         </Link>
-        <Link to="/"
+        <Link onClick={() =>
+            scrollToComponent(props.refs[2], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }
         style={{maxWidth:'15rem'}}
         >
           <MenuItem>

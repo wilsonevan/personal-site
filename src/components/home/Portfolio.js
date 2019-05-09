@@ -13,7 +13,7 @@ const Portfolio = () => {
       <PortfolioHeader>Portfolio</PortfolioHeader>
       <EachProject>
         <ProjectView
-          title={"Beaker LMS for Coding Bootcamps"}
+          title={"Beakr LMS for Coding Bootcamps"}
           github={"https://github.com/devpointlabs/beakr"}
           url={"https://beakr-dpl.herokuapp.com/"}
           instructions={[
@@ -25,7 +25,7 @@ const Portfolio = () => {
           skills={["Reactjs", "Ruby on Rails", "Raw SQL","PostgreSQL", "HTML/CSS", "Twilio", "Cloudinary", "Chart.js", "Devise", "Styled Components"]}
         />
         <ProjectView
-          title={"Audio Grenade Website"}
+          title={"Audio-Grenade Website & Store"}
           github={"https://github.com/wilsonevan/audio_grenade3"}
           url={"https://dev-audio-grenade.netlify.com/"}
           logo={AGLogo}

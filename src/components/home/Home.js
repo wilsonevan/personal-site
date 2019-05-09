@@ -22,7 +22,7 @@ class Home extends React.Component {
     return (
       <>
         <PageContainer>
-          <Navbar refs={[this.About, this.Top]} />
+          <Navbar refs={[this.About, this.Projects, this.Top, ]} />
           {/* <MyButton
             onClick={() =>
               scrollToComponent(this.About, {
@@ -43,8 +43,8 @@ class Home extends React.Component {
               <DescriptionContainer>
                 <PrimaryText>Cortona Creative</PrimaryText>
                 <MySecondaryText>
-                  Strengthening our community by improving opportunities for
-                  lifelong learning.
+                  Strengthening my community by improving opportunities for
+                  lifelong learning through technology.
                 </MySecondaryText>
               </DescriptionContainer>
             </TopContainer>
@@ -102,7 +102,7 @@ const CircleImage = styled.img`
 
 const MySecondaryText = styled(SecondaryText)`
   text-align: left;
-  width: 50%;
+  width: 60%;
 `;
 
 const DescriptionContainer = styled.div`
