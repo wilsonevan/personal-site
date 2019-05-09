@@ -13,7 +13,7 @@ import { globalColors } from "../../styles/GlobalStyles";
 const Profile = () => {
   return (
     <SecondContainer>
-      <AboutHeader>About Us</AboutHeader>
+      <AboutHeader>About Me</AboutHeader>
       <ProfileImage src={profileImage} alt="profileImage" />
       <ProfileContainer>
         <NameContainer>
@@ -84,6 +84,7 @@ const AboutContainer = styled.div`
 
 const AboutText = styled.h3`
   font-weight: ${props => props.fontWeight || "lighter"} !important;
+  width: 50vw;
 `;
 
 export default Profile;
