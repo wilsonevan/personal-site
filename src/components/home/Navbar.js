@@ -22,6 +22,7 @@ const Navbar = props => {
               duration: 1500
             })
           }
+          style={{maxWidth:'15rem'}}
         >
           <MenuItem>
             <Item>About Us</Item>
@@ -36,12 +37,22 @@ const Navbar = props => {
               duration: 1500
             })
           }
+          style={{maxWidth:'15rem'}}
         >
           <MenuItem>
             <Item>Portfolio</Item>
           </MenuItem>
         </Link>
-        <Link to="/">
+        <Link onClick={() =>
+            scrollToComponent(props.refs[2], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }
+        style={{maxWidth:'15rem'}}
+        >
           <MenuItem>
             <Item>Contact</Item>
           </MenuItem>

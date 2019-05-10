@@ -59,7 +59,7 @@ const ProfileImage = styled.img`
 const NameContainer = styled.div`
   margin-top: 3rem;
   position: relative;
-  right: 30rem;
+  right: 15rem;
 `;
 
 const ProfileName = styled(PrimaryText)`
