@@ -22,10 +22,10 @@ const Navbar = props => {
               duration: 1500
             })
           }
-          style={{maxWidth:'15rem'}}
+          style={{maxWidth:'20rem'}}
         >
           <MenuItem>
-            <Item>About Us</Item>
+            <Item>How We Work</Item>
           </MenuItem>
         </Link>
         <Link
@@ -40,11 +40,26 @@ const Navbar = props => {
           style={{maxWidth:'15rem'}}
         >
           <MenuItem>
+            <Item>About Us</Item>
+          </MenuItem>
+        </Link>
+        <Link
+          onClick={() =>
+            scrollToComponent(props.refs[2], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }
+          style={{maxWidth:'15rem'}}
+        >
+          <MenuItem>
             <Item>Portfolio</Item>
           </MenuItem>
         </Link>
         <Link onClick={() =>
-            scrollToComponent(props.refs[2], {
+            scrollToComponent(props.refs[3], {
               offset: 0,
               align: "top",
               ease: "inOutCube",

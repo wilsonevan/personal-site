@@ -13,7 +13,7 @@ import { globalColors } from "../../styles/GlobalStyles";
 const Profile = () => {
   return (
     <SecondContainer>
-      <AboutHeader>About Me</AboutHeader>
+      <AboutHeader>About Us</AboutHeader>
       <ProfileImage src={profileImage} alt="profileImage" />
       <ProfileContainer>
         <NameContainer>
