@@ -18,18 +18,18 @@ const Portfolio = () => {
           url={"https://beakr-dpl.herokuapp.com/"}
           instructions={[
             "1. Remember you may need to wait 15s for the server to boot up.",
-            "2. Login as test@test.com to view teacher views.",
-            "3. Login as evanstudent@test.com to view student view."
+            '2. For Teacher Views, use test@test.com with password: "password"',
+            '3. For Student Views, evanstudent@test.com with password: "password"'
           ]}
           logo={beakrLogo}
-          skills={["Reactjs", "Ruby on Rails", "Raw SQL","PostgreSQL", "HTML/CSS", "Twilio", "Cloudinary", "Chart.js", "Devise", "Styled Components"]}
+          skills={["Reactjs", "Ruby on Rails", "Raw SQL","PostgreSQL", "HTML/CSS", "Twilio", "Cloudinary", "Chartjs", "Devise", "React Hooks"]}
         />
         <ProjectView
           title={"Audio-Grenade Website & Store"}
           github={"https://github.com/wilsonevan/audio_grenade3"}
           url={"https://dev-audio-grenade.netlify.com/"}
           logo={AGLogo}
-          skills={["Reactjs","HTML/CSS", "BigCommerce", "Freshworks","Styled Components"]}
+          skills={["Reactjs","HTML/CSS", "BigCommerce", "Freshworks","React Hooks"]}
         />
       </EachProject>
     </ProjectsContainer>

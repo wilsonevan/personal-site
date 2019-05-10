@@ -50,10 +50,10 @@ const ProjectContainer = styled.div`
   border-top: 1px solid ${globalColors.PrimaryBlue};
   border-left: 1px solid ${globalColors.PrimaryBlue};
   border-radius: 0.5rem;
-  margin: 3rem;
+  margin: 0.5rem;
   padding: 0.5rem;
-  height: 30rem;
-  width: 40rem;
+  height: 25rem;
+  width: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,7 +148,7 @@ const InstructionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2rem;
+  padding: 1rem;
   /* max-width: 40%; */
 `;
 const InstructionsHeader = styled.h2`
