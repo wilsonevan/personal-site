@@ -25,7 +25,7 @@ const Navbar = props => {
           style={{maxWidth:'15rem'}}
         >
           <MenuItem>
-            <Item>About Me</Item>
+            <Item>About Us</Item>
           </MenuItem>
         </Link>
         <Link
