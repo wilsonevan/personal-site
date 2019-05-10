@@ -1,17 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 import { globalColors } from "../../styles/GlobalStyles";
 
-
-const SkillCard = (props) => {
+const SkillCard = props => {
   return (
     <CardContainer>
-      <CardText>
-        {props.skill}
-      </CardText>
+      <CardText>{props.skill}</CardText>
     </CardContainer>
-  )
-}
+  );
+};
 
 const CardContainer = styled.div`
   margin: 0.5rem;
@@ -19,9 +16,9 @@ const CardContainer = styled.div`
   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
   padding: 0.5rem 1rem 0.5rem 1rem;
   opacity: 0.8;
-  background-color: ${globalColors.PrimaryGreen}
-  `
+  background-color: ${globalColors.PrimaryGreen};
+`;
 
-const CardText = styled.h3``
+const CardText = styled.h3``;
 
-export default SkillCard
+export default SkillCard;

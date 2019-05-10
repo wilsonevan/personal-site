@@ -32,7 +32,7 @@ export const SecondContainer = styled.section`
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  border-bottom: ${globalColors.PrimaryOrange};
+  border-bottom: ${globalColors.PrimaryBlue};
   border-bottom-width: 3px;
   border-bottom-style: solid;
 `;

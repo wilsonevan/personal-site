@@ -7,6 +7,8 @@ import {
   TopContainer
 } from "../../styles/GlobalComponents";
 import { globalColors } from "../../styles/GlobalStyles";
+import beakrLogo from "../../images/beakr_logo.svg";
+import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
 
 const Overview = () => {
   const calcItemRotation = position => {
@@ -23,29 +25,64 @@ const Overview = () => {
         <SmallCircleContainer rot={calcItemRotation(0)}>
           <SmallCircleItem>Ideas</SmallCircleItem>
           <BigCircleItem>
-            <InnerText> Let's connect and see what we can do</InnerText>
+            <InnerText>Let's connect and see what we can do</InnerText>
             <InnerButton>Contact Us</InnerButton>
           </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(1)}>
           <SmallCircleItem>Build</SmallCircleItem>
-          <BigCircleItem>Test</BigCircleItem>
+          <BigCircleItem>
+            <InnerText>Experience in:</InnerText>
+            <ExperienceContainer>
+              <ExperienceItem>HTML/CSS</ExperienceItem>
+              <ExperienceItem>Reactjs</ExperienceItem>
+              <ExperienceItem>Ruby on Rails</ExperienceItem>
+              <ExperienceItem>Python</ExperienceItem>
+              <ExperienceItem>Raw SQL</ExperienceItem>
+              <ExperienceItem>PostgreSQL</ExperienceItem>
+              <ExperienceItem>Javascript</ExperienceItem>
+              <ExperienceItem>C</ExperienceItem>
+              <ExperienceItem>Matlab</ExperienceItem>
+              <ExperienceItem>Assembly</ExperienceItem>
+            </ExperienceContainer>
+          </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(2)}>
           <SmallCircleItem>Product</SmallCircleItem>
-          <BigCircleItem>Test</BigCircleItem>
+          <BigCircleItem>
+            <InnerText>Check out our previous projects:</InnerText>
+            <ExperienceContainer>
+              <Logo src={beakrLogo} alt="BeakrLogo" />
+              <Logo src={AGLogo} alt="AGLogo" />
+            </ExperienceContainer>
+          </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(3)}>
           <SmallCircleItem>Measure</SmallCircleItem>
-          <BigCircleItem>Test</BigCircleItem>
+          <BigCircleItem>
+            <InnerText>
+              We utilize modern sales and marketing practices to quickly test
+              product in various channels to gain quick feedback
+            </InnerText>
+            <ExperienceContainer />
+          </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(4)}>
           <SmallCircleItem>Data</SmallCircleItem>
-          <BigCircleItem>Test</BigCircleItem>
+          <BigCircleItem>
+            <InnerText>
+              By gathering sales and marketing data and utlizing entrepreneurial
+              accounting, we are able to quickly make changes and decisions.
+            </InnerText>
+          </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(5)}>
           <SmallCircleItem>Learn</SmallCircleItem>
-          <BigCircleItem>Test</BigCircleItem>
+          <BigCircleItem>
+            <InnerText>
+              Finally, decisions can be made based on data from our internal analytics engine, and forward progress is made.
+            </InnerText>
+          </BigCircleItem>
         </SmallCircleContainer>
         <CircleLabelContainer>
           <CircleLabel>Lean Development</CircleLabel>
@@ -61,6 +98,11 @@ const PageContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  border-bottom: ${globalColors.PrimaryOrange};
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
 `;
 
 const MyPrimaryText = styled(PrimaryText)`
@@ -93,6 +135,7 @@ const CircleLabel = styled.h2`
   text-align: center;
   color: ${globalColors.PrimaryRed};
   font-size: 3rem;
+  padding-bottom: 2rem;
 `;
 
 const SmallCircleContainer = styled.div`
@@ -107,7 +150,7 @@ const SmallCircleContainer = styled.div`
   margin: calc(-6rem / 2);
 
   transform: rotate(calc(${props => props.rot} * 1deg))
-    translate(calc(35vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+    translate(calc(33vw / 2)) rotate(calc(${props => props.rot} * -1deg));
 
   /* :hover {
     transition: display 0.2s linear;
@@ -136,11 +179,11 @@ const SmallCircleItem = styled.div`
 
 const BigCircleItem = styled(SmallCircleItem)`
   display: none;
-  width: 18rem;
-  height: 18rem;
-  margin: calc(-18rem / 2);
+  width: 20rem;
+  height: 20rem;
+  margin: calc(-20rem / 2);
   background-color: ${globalColors.PrimaryBlue};
-  /* border: 10px solid ${globalColors.PrimaryBlue}; */
+  /* border: 10px solid ${globalColors.PrimaryGrey}; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -160,6 +203,31 @@ const InnerText = styled.h4`
 
 const InnerButton = styled.button`
   margin: 0.5rem;
+`;
+
+const ExperienceContainer = styled.div`
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const ExperienceItem = styled.div`
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  opacity: 0.8;
+  background-color: ${globalColors.PrimaryGreen};
+  max-height: 2rem;
+  font-size: 1rem;
+`;
+
+const Logo = styled.img`
+  height: 4rem;
+  width: 4rem;
+  margin: 10px 16px 5px 16px;
 `;
 
 export default Overview;

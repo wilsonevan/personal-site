@@ -44,7 +44,7 @@ class Home extends React.Component {
               <DescriptionContainer>
                 <PrimaryText>Cortona Creative</PrimaryText>
                 <MySecondaryText>
-                  Strengthening my community by improving opportunities for
+                  Strengthening our community by improving opportunities for
                   lifelong learning through technology.
                 </MySecondaryText>
               </DescriptionContainer>
