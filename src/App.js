@@ -4,6 +4,7 @@ import { GlobalStyles } from "./styles/GlobalStyles";
 import Home from "./components/home/Home";
 import NoMatch from "./components/NoMatch";
 import Footer from "./components/Footer";
+// import Overview from './components/philosophy/Overview'
 // import { MyTheme } from "./styles/MyTheme";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <GlobalStyles />
       <Switch>
         <Route exact path="/" component={Home} />
+        {/* <Route exact path="/overview" component={Overview} /> */}
         <Route component={NoMatch} />
       </Switch>
       {/* <Footer /> */}
