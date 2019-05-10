@@ -19,7 +19,7 @@ const Navbar = props => {
               offset: 0,
               align: "top",
               ease: "inOutCube",
-              duration: 1500
+              duration: 1000
             })
           }
           style={{maxWidth:'15rem'}}
@@ -48,7 +48,7 @@ const Navbar = props => {
               offset: 0,
               align: "top",
               ease: "inOutCube",
-              duration: 1500
+              duration: 1000
             })
           }
         style={{maxWidth:'15rem'}}

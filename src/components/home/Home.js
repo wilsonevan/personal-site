@@ -16,13 +16,14 @@ import { globalColors } from "../../styles/GlobalStyles";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
 import Portfolio from "./Portfolio";
+import Resume from "./Resume";
 
 class Home extends React.Component {
   render() {
     return (
       <>
         <PageContainer>
-          <Navbar refs={[this.About, this.Projects, this.Top, ]} />
+          <Navbar refs={[this.About, this.Projects, this.Top]} />
           {/* <MyButton
             onClick={() =>
               scrollToComponent(this.About, {
@@ -62,6 +63,13 @@ class Home extends React.Component {
             }}
           >
             <Portfolio />
+          </section>
+          <section
+            ref={section => {
+              this.Resume = section;
+            }}
+          >
+            <Resume />
           </section>
         </PageContainer>
       </>
