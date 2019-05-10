@@ -24,7 +24,7 @@ const Navbar = props => {
           }
         >
           <MenuItem>
-            <Item>About Me</Item>
+            <Item>About Us</Item>
           </MenuItem>
         </Link>
         <Link
