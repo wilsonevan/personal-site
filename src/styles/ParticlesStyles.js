@@ -4,7 +4,7 @@ export const particleStyles = {
   width: "100vh",
   height: "100vh",
   position: "absolute",
-  zIndex: "-1",
+  // zIndex: "",
   backgroundColor: globalColors.PrimaryWhite
   // backgroundImage: `url(${logo})`
 };
@@ -50,15 +50,15 @@ export const particleParams = {
       value: 5,
       random: true,
       anim: {
-        enable: false,
-        speed: 40,
+        enable: true,
+        speed: 10,
         size_min: 0.1,
         sync: false
       }
     },
     line_linked: {
       enable: true,
-      distance: 257,
+      distance: 200,
       color: globalColors.PrimaryBlue,
       opacity: 1,
       width: 0

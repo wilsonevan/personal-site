@@ -43,9 +43,10 @@ const ProjectsContainer = styled(SecondContainer)`
 `;
 
 const PortfolioHeader = styled.h1`
-  margin-top: 3rem;
-  color: ${globalColors.PrimaryOrange};
-  text-decoration: underline;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  /* color: ${globalColors.PrimaryOrange}; */
+  /* text-decoration: underline; */
 `;
 
 const EachProject = styled.div`

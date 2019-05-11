@@ -4,17 +4,23 @@ const globalColors = {
   PrimaryWhite: "#F2F2F2",
   PrimaryBlack: "#1C1C1C",
   PrimaryGrey: "#424242",
-  PrimaryRed: "#FFAEA8",
-  PrimaryOrange: "#FFDBA8",
+  PrimaryRed: "#FF6B5F",
+  SecondaryRed: "#FF948C",
+  PrimaryOrange: "#FFBD5F",
+  SecondaryOrange: "#FFDBA8",
   PrimaryGreen: "#A5FAB4",
-  PrimaryBlue: "#A9D3F8"
+  SecondaryGreen: "#8CFFA0",
+  SecondaryBlue: "#A9D3F8",
+  PrimaryBlue: "#6AB9FF"
 };
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 
 * {
-    font-family: Montserrat, san-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: inherit !important;
@@ -30,11 +36,12 @@ body {
 }
 
 h1 {
+    font-family: 'Bungee Shade', cursive !important;
     letter-spacing: 2px !important;
     font-weight: 1200 !important;
     font-size: 4rem !important;
     padding-bottom: 0.2rem;
-    color: ${globalColors.PrimaryOrange};
+    color: ${globalColors.PrimaryRed};
     /* border-bottom: 1px solid #349dc4; */
 }
 

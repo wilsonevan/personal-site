@@ -30,14 +30,14 @@ const Profile = () => {
 };
 
 const AboutHeader = styled(PrimaryText)`
-  color: ${globalColors.PrimaryOrange};
+  /* color: ${globalColors.PrimaryRed}; */
   margin-left: 3rem;
   position: relative;
-  min-width: 400px;
+  min-width: 500px;
   max-height: 100px;
-  top: 400px;
+  top: 450px;
   left: 0;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 
   /* Rotate from top left corner (not default) */
   transform-origin: 0% 0%;
@@ -53,17 +53,17 @@ const ProfileImage = styled.img`
   width: auto;
   opacity: 0.85;
   position: relative;
-  right: 300px;
+  right: 400px;
 `;
 
 const NameContainer = styled.div`
   margin-top: 3rem;
   position: relative;
-  right: 15rem;
+  right: 360px;
 `;
 
-const ProfileName = styled(PrimaryText)`
-  color: ${globalColors.PrimaryRed};
+const ProfileName = styled(SecondaryText)`
+  color: ${globalColors.PrimaryBlue};
   padding: 0;
   text-transform: uppercase;
   font-size: 5rem !important;
@@ -78,7 +78,7 @@ const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  right: 300px;
+  right: 400px;
   padding: 3rem;
 `;
 
