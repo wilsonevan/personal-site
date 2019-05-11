@@ -41,6 +41,7 @@ const Overview = () => {
               <ExperienceItem>Raw SQL</ExperienceItem>
               <ExperienceItem>PostgreSQL</ExperienceItem>
               <ExperienceItem>Javascript</ExperienceItem>
+              <ExperienceItem>XML</ExperienceItem>
               <ExperienceItem>C</ExperienceItem>
               <ExperienceItem>Matlab</ExperienceItem>
               <ExperienceItem>Assembly</ExperienceItem>
@@ -98,7 +99,7 @@ const PageContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  border-bottom: ${globalColors.PrimaryOrange};
+  border-bottom: ${globalColors.SecondaryOrange};
   border-bottom-width: 3px;
   border-bottom-style: solid;
   padding-top: 3rem;
@@ -112,7 +113,7 @@ const MyPrimaryText = styled(PrimaryText)`
 const CircleContainer = styled.div`
   /* @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 6em); */
   /* margin: 5em auto 0; */
-  border: solid 10px ${globalColors.PrimaryBlue};
+  border: solid 10px ${globalColors.SecondaryOrange};
   position: relative;
   width: 35vw;
   height: 35vw;
@@ -133,7 +134,7 @@ const CircleLabel = styled.h2`
   /* left: 50%; */
   width: 80%;
   text-align: center;
-  color: ${globalColors.PrimaryRed};
+  color: ${globalColors.PrimaryBlue};
   font-size: 3rem;
   padding-bottom: 2rem;
 `;
@@ -163,7 +164,7 @@ const SmallCircleItem = styled.div`
   height: 10rem;
   margin: calc(-10rem / 2);
   border-radius: 50%;
-  background-color: ${globalColors.PrimaryBlue};
+  background-color: ${globalColors.SecondaryBlue};
   /* border: 1px solid ${globalColors.PrimaryBlue}; */
 
   display: flex;
@@ -182,7 +183,7 @@ const BigCircleItem = styled(SmallCircleItem)`
   width: 20rem;
   height: 20rem;
   margin: calc(-20rem / 2);
-  background-color: ${globalColors.PrimaryBlue};
+  background-color: ${globalColors.SecondaryBlue};
   /* border: 10px solid ${globalColors.PrimaryGrey}; */
   flex-direction: column;
   justify-content: center;

@@ -2,8 +2,10 @@ import React, { useRef } from "react";
 import scrollToComponent from "react-scroll-to-component";
 import Particles from "react-particles-js";
 import { particleParams, particleStyles } from "../../styles/ParticlesStyles";
+import { Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import image1 from "../../images/barca_4_cropped.jpg";
 import {
   PageContainer,
@@ -23,7 +25,9 @@ class Home extends React.Component {
     return (
       <>
         <PageContainer>
-          <Navbar refs={[this.Philosophy, this.About, this.Projects, this.Top]} />
+          <Navbar
+            refs={[this.Philosophy, this.About, this.Projects, this.Top]}
+          />
           {/* <MyButton
             onClick={() =>
               scrollToComponent(this.About, {
@@ -38,17 +42,30 @@ class Home extends React.Component {
               this.Top = section;
             }}
           >
-            <Particles params={particleParams} style={particleStyles} />
-            <TopContainer>
-              <CircleImage src={image1} alt="CCLogo" />
+            <MyTopContainer>
+              <Particles params={particleParams} style={particleStyles} />
               <DescriptionContainer>
-                <PrimaryText>Cortona Creative</PrimaryText>
                 <MySecondaryText>
                   Strengthening our community by improving opportunities for
                   lifelong learning through technology.
                 </MySecondaryText>
+                <MyPrimaryText>Cortona Creative</MyPrimaryText>
               </DescriptionContainer>
-            </TopContainer>
+              <Link
+                onClick={() =>
+                  scrollToComponent(this.Philosophy, {
+                    offset: 0,
+                    align: "top",
+                    ease: "inOutCube",
+                    duration: 1000
+                  })
+                }
+              >
+                <NextSlide>
+                  <Icon size="huge" color='grey' fitted name="angle double down" />
+                </NextSlide>
+              </Link>
+            </MyTopContainer>
           </section>
           <section
             ref={section => {
@@ -86,6 +103,18 @@ class Home extends React.Component {
 //   margin-top: 45vh;
 // `;
 
+const MyTopContainer = styled.div`
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-bottom: #a9d3f8;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+`;
+
 const MyButton = styled.button`
   position: absolute;
   top: 100px;
@@ -98,28 +127,66 @@ const MyButton = styled.button`
   }
 `;
 
-const CircleImage = styled.img`
-  width: 40vw;
-  min-width: 20rem;
-  height: auto;
-  /* height: 70vh; */
-  border-radius: 50%;
-  border: 5px solid #a9d3f8;
-  margin-bottom: 10rem;
+const MyPrimaryText = styled(PrimaryText)`
+  text-align: center;
+  font-size: 6rem !important;
+  width: 50rem;
+  margin: 0;
 `;
 
 const MySecondaryText = styled(SecondaryText)`
-  text-align: left;
-  width: 60%;
+  text-align: center;
+  width: 40rem;
+  line-height: 1.5em;
+  font-size: 2.2rem;
+  /* background-color: rgba(255,255,255,0.3); */
+  /* box-shadow:  0 0 50px rgba(255,255,255,0.3); */
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid ${globalColors.SecondaryBlue};
 `;
 
 const DescriptionContainer = styled.div`
-  padding-left: 3rem;
-  padding-right: 3rem;
   position: absolute;
-  bottom: 0rem;
+  top: 0;
+  left: 0;
+  height: 100vh;
   width: 100%;
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid ${globalColors.SecondaryBlue};
+  border-bottom: 1px solid ${globalColors.SecondaryBlue};
+`;
+
+const pulse = keyframes`
+    0% {
+    -moz-box-shadow: 0 0 0 0 ${globalColors.SecondaryBlue};
+    box-shadow: 0 0 0 0 ${globalColors.SecondaryBlue};
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 40px rgba(204,169,44, 0);
+      box-shadow: 0 0 0 40px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+`;
+
+const NextSlide = styled.div`
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+  animation: ${pulse} 2s infinite;
+  height: 2px;
+  width: 2px;
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Home;

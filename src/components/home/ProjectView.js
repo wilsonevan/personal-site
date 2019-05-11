@@ -45,12 +45,12 @@ const ProjectView = props => {
 };
 
 const ProjectContainer = styled.div`
-  border-bottom: 5px solid ${globalColors.PrimaryBlue};
-  border-right: 3px solid ${globalColors.PrimaryBlue};
-  border-top: 1px solid ${globalColors.PrimaryBlue};
-  border-left: 1px solid ${globalColors.PrimaryBlue};
+  border-bottom: 5px solid ${globalColors.SecondaryBlue};
+  border-right: 3px solid ${globalColors.SecondaryBlue};
+  border-top: 1px solid ${globalColors.SecondaryBlue};
+  border-left: 1px solid ${globalColors.SecondaryBlue};
   border-radius: 0.5rem;
-  margin: 0.5rem;
+  margin: 1rem 2rem 1rem 2rem;
   padding: 0.5rem;
   height: 25rem;
   width: 35rem;
@@ -61,7 +61,7 @@ const ProjectContainer = styled.div`
   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
 
   :hover {
-    background-color: ${globalColors.PrimaryBlue};
+    background-color: ${globalColors.SecondaryBlue};
     transition: background-color 0.2s linear;
   }
 `;
@@ -77,9 +77,13 @@ const EachProject = styled.div`
   }
 `;
 
-const ProjectHeader = styled.h2``;
+const ProjectHeader = styled.h2`
+  margin: 0;
+`;
 
-const ProjectDescription = styled.h3``;
+const ProjectDescription = styled.h3`
+  margin: 0;
+`;
 
 const ProjectDetails = styled.div`
   display: flex;
@@ -151,13 +155,17 @@ const InstructionsContainer = styled.div`
   padding: 1rem;
   /* max-width: 40%; */
 `;
-const InstructionsHeader = styled.h2`
+const InstructionsHeader = styled.h3`
   text-align: center;
   padding: 0.2rem;
   text-decoration: underline;
+  margin: 0;
+
 `;
 const Instructions = styled.h4`
   padding: 0.5rem;
+  margin: 0;
+
 `;
 
 export default ProjectView;

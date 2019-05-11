@@ -80,12 +80,13 @@ const Navbar = props => {
 const NavContainer = styled.div`
   position: absolute;
   top: 0rem;
-  width: 100%;
+  /* width: 100%; */
+  z-index: 10;
 `;
 
 const MenuItem = styled.div`
   float: left;
-  font-size: 1.25rem;
+  font-size: 1rem;
   z-index: 1;
 
   :hover {
@@ -108,14 +109,14 @@ const Item = styled.h2`
 
 const Logo = styled.img`
   height: auto;
-  width: 8rem;
+  width: 6rem;
   margin: 10px 16px 5px 16px;
 `;
 
 const NavMenu = styled.div`
   list-style-type: none;
-  margin-left: 3rem;
-  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
