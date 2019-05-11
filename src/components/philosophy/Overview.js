@@ -115,8 +115,8 @@ const CircleContainer = styled.div`
   /* margin: 5em auto 0; */
   border: solid 10px ${globalColors.SecondaryOrange};
   position: relative;
-  width: 35vw;
-  height: 35vw;
+  min-width: 35vw;
+  min-height: 35vw;
   padding: 0;
   border-radius: 50%;
   list-style: none;

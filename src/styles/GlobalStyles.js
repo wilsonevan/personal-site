@@ -4,6 +4,7 @@ const globalColors = {
   PrimaryWhite: "#F2F2F2",
   PrimaryBlack: "#1C1C1C",
   PrimaryGrey: "#424242",
+  SecondaryGrey: "#d3d3d3",
   PrimaryRed: "#FF6B5F",
   SecondaryRed: "#FF948C",
   PrimaryOrange: "#FFBD5F",
