@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 import { globalColors } from "../../styles/GlobalStyles";
-import profileImage from "../../images/evan_profile_smile.jpeg";
+import profileImage from "../../images/IMG_1776.jpg";
 import LinkedInIcon from "../../images/In-Blue-96.png";
 import GitHubIcon from "../../images/GitHub-Mark-64px.png";
 
@@ -14,7 +14,7 @@ const Networking = () => {
         <ProfilePic src={profileImage} alt="profileImage" />
         <NameContainer>
           <Name fontWeight={"900"}>Evan Wilson, </Name>
-          <Name fontWeight={"500"}>Developer</Name>
+          <Name fontWeight={"500"}>Product Guy</Name>
         </NameContainer>
         <ItemContainer>
           <Icon size={"large"} name={"map marker alternate"} />

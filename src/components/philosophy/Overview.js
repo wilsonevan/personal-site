@@ -11,7 +11,6 @@ import {
 import { globalColors } from "../../styles/GlobalStyles";
 import beakrLogo from "../../images/beakr_logo.svg";
 import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
-import BGImage from "../../images/kvistholt-photography-191153-unsplash-blurred.jpg"
 
 const Overview = props => {
   const calcItemRotation = position => {
@@ -96,7 +95,7 @@ const Overview = props => {
           <BigCircleItem>
             <InnerText>
               Finally, decisions can be made based on data from our internal
-              analytics engine, and forward progress is made.
+              analytics engine, and we begin the next rev.
             </InnerText>
           </BigCircleItem>
         </SmallCircleContainer>
@@ -119,7 +118,6 @@ const PageContainer = styled.div`
   border-bottom-style: solid;
   padding-top: 3rem;
   padding-bottom: 8rem;
-  background-image: url(${BGImage}) !important;
   /* filter: blur(8px);
   -webkit-filter: blur(8px); */
 
@@ -163,7 +161,7 @@ const CircleLabel = styled.h2`
   text-align: center;
   color: ${globalColors.PrimaryBlue};
   font-size: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const SmallCircleContainer = styled.div`
@@ -225,22 +223,24 @@ const BigCircleItem = styled(SmallCircleItem)`
 `;
 
 const InnerText = styled.h4`
+  padding-top: 0.3rem;
   font-size: 1.5rem;
   text-align: center;
+  width: 80%;
 `;
 
-const InnerButton = styled.button`
-  margin: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  background-color: ${globalColors.PrimaryOrange};
-  box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
-  border-radius: 0.5rem;
-  font-size: 2rem;
+// const InnerButton = styled.button`
+//   margin: 0.5rem;
+//   padding: 0.5rem 1rem 0.5rem 1rem;
+//   background-color: ${globalColors.PrimaryOrange};
+//   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
+//   border-radius: 0.5rem;
+//   font-size: 2rem;
 
-  :hover {
-    cursor: pointer;
-  }
-`;
+//   :hover {
+//     cursor: pointer;
+//   }
+// `;
 
 const ExperienceContainer = styled.div`
   margin-top: 0.5rem;
