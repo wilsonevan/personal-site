@@ -23,18 +23,25 @@ export const TopContainer = styled.section`
 `;
 
 export const SecondContainer = styled.section`
+  position: relative;
+  top: 0;
+  left: 0;
   display: flex;
   /* flex-direction: column; */
   justify-content: space-between;
   /* align-items: left; */
   min-height: 80vh;
   width: 100%;
+  background-color: ${globalColors.PrimaryWhite};
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   border-bottom: ${globalColors.SecondaryBlue};
   border-bottom-width: 3px;
   border-bottom-style: solid;
+  border-top: ${globalColors.SecondaryOrange};
+  border-top-width: 3px;
+  border-top-style: solid;
 `;
 
 export const PrimaryText = styled.h1`

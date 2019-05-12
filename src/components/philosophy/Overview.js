@@ -1,14 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Transition } from "react-transition-group";
-import {
-  PrimaryText,
-  SecondaryText,
-  TopContainer
-} from "../../styles/GlobalComponents";
+import { PrimaryText } from "../../styles/GlobalComponents";
 import { globalColors } from "../../styles/GlobalStyles";
 import beakrLogo from "../../images/beakr_logo.svg";
 import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
+import BGImage from "../../images/kvistholt-photography-191153-unsplash-blurred.jpg";
 
 const Overview = () => {
   const calcItemRotation = position => {
@@ -20,99 +16,124 @@ const Overview = () => {
 
   return (
     <PageContainer>
-      <MyPrimaryText>Our Philosophy</MyPrimaryText>
-      <CircleContainer>
-        <SmallCircleContainer rot={calcItemRotation(0)}>
-          <SmallCircleItem>Ideas</SmallCircleItem>
-          <BigCircleItem>
-            <InnerText>Let's connect and see what we can do</InnerText>
-            <InnerButton>Contact Us</InnerButton>
-          </BigCircleItem>
-        </SmallCircleContainer>
-        <SmallCircleContainer rot={calcItemRotation(1)}>
-          <SmallCircleItem>Build</SmallCircleItem>
-          <BigCircleItem>
-            <InnerText>Experience in:</InnerText>
-            <ExperienceContainer>
-              <ExperienceItem>HTML/CSS</ExperienceItem>
-              <ExperienceItem>Reactjs</ExperienceItem>
-              <ExperienceItem>Ruby on Rails</ExperienceItem>
-              <ExperienceItem>Python</ExperienceItem>
-              <ExperienceItem>Raw SQL</ExperienceItem>
-              <ExperienceItem>PostgreSQL</ExperienceItem>
-              <ExperienceItem>Javascript</ExperienceItem>
-              <ExperienceItem>XML</ExperienceItem>
-              <ExperienceItem>C</ExperienceItem>
-              <ExperienceItem>Matlab</ExperienceItem>
-              <ExperienceItem>Assembly</ExperienceItem>
-            </ExperienceContainer>
-          </BigCircleItem>
-        </SmallCircleContainer>
-        <SmallCircleContainer rot={calcItemRotation(2)}>
-          <SmallCircleItem>Product</SmallCircleItem>
-          <BigCircleItem>
-            <InnerText>Check out our previous projects:</InnerText>
-            <ExperienceContainer>
-              <Logo src={beakrLogo} alt="BeakrLogo" />
-              <Logo src={AGLogo} alt="AGLogo" />
-            </ExperienceContainer>
-          </BigCircleItem>
-        </SmallCircleContainer>
-        <SmallCircleContainer rot={calcItemRotation(3)}>
-          <SmallCircleItem>Measure</SmallCircleItem>
-          <BigCircleItem>
-            <InnerText>
-              We utilize modern sales and marketing practices to quickly test
-              product in various channels to gain quick feedback
-            </InnerText>
-            <ExperienceContainer />
-          </BigCircleItem>
-        </SmallCircleContainer>
-        <SmallCircleContainer rot={calcItemRotation(4)}>
-          <SmallCircleItem>Data</SmallCircleItem>
-          <BigCircleItem>
-            <InnerText>
-              By gathering sales and marketing data and utlizing entrepreneurial
-              accounting, we are able to quickly make changes and decisions.
-            </InnerText>
-          </BigCircleItem>
-        </SmallCircleContainer>
-        <SmallCircleContainer rot={calcItemRotation(5)}>
-          <SmallCircleItem>Learn</SmallCircleItem>
-          <BigCircleItem>
-            <InnerText>
-              Finally, decisions can be made based on data from our internal analytics engine, and forward progress is made.
-            </InnerText>
-          </BigCircleItem>
-        </SmallCircleContainer>
-        <CircleLabelContainer>
-          <CircleLabel>Lean Development</CircleLabel>
-        </CircleLabelContainer>
-      </CircleContainer>
+      <BackgroundImage src={BGImage} alt="BGImage" />
+      <PhilosophyContainer>
+        <MyPrimaryText>Our Philosophy</MyPrimaryText>
+        <CircleContainer>
+          <SmallCircleContainer rot={calcItemRotation(0)}>
+            <SmallCircleItem>Ideas</SmallCircleItem>
+            <BigCircleItem>
+              <InnerText>Let's connect and see what we can do</InnerText>
+              <InnerButton>Contact Us</InnerButton>
+            </BigCircleItem>
+          </SmallCircleContainer>
+          <SmallCircleContainer rot={calcItemRotation(1)}>
+            <SmallCircleItem>Build</SmallCircleItem>
+            <BigCircleItem>
+              <InnerText>Experience in:</InnerText>
+              <ExperienceContainer>
+                <ExperienceItem>HTML/CSS</ExperienceItem>
+                <ExperienceItem>Reactjs</ExperienceItem>
+                <ExperienceItem>Ruby on Rails</ExperienceItem>
+                <ExperienceItem>Python</ExperienceItem>
+                <ExperienceItem>Raw SQL</ExperienceItem>
+                <ExperienceItem>PostgreSQL</ExperienceItem>
+                <ExperienceItem>Javascript</ExperienceItem>
+                <ExperienceItem>XML</ExperienceItem>
+                <ExperienceItem>C</ExperienceItem>
+                <ExperienceItem>Matlab</ExperienceItem>
+                <ExperienceItem>Assembly</ExperienceItem>
+              </ExperienceContainer>
+            </BigCircleItem>
+          </SmallCircleContainer>
+          <SmallCircleContainer rot={calcItemRotation(2)}>
+            <SmallCircleItem>Product</SmallCircleItem>
+            <BigCircleItem>
+              <InnerText>Check out our previous projects:</InnerText>
+              <ExperienceContainer>
+                <Logo src={beakrLogo} alt="BeakrLogo" />
+                <Logo src={AGLogo} alt="AGLogo" />
+              </ExperienceContainer>
+            </BigCircleItem>
+          </SmallCircleContainer>
+          <SmallCircleContainer rot={calcItemRotation(3)}>
+            <SmallCircleItem>Measure</SmallCircleItem>
+            <BigCircleItem>
+              <InnerText>
+                We utilize modern sales and marketing practices to quickly test
+                product in various channels to gain quick feedback
+              </InnerText>
+              <ExperienceContainer />
+            </BigCircleItem>
+          </SmallCircleContainer>
+          <SmallCircleContainer rot={calcItemRotation(4)}>
+            <SmallCircleItem>Data</SmallCircleItem>
+            <BigCircleItem>
+              <InnerText>
+                By gathering sales and marketing data and utlizing
+                entrepreneurial accounting, we are able to quickly make changes
+                and decisions.
+              </InnerText>
+            </BigCircleItem>
+          </SmallCircleContainer>
+          <SmallCircleContainer rot={calcItemRotation(5)}>
+            <SmallCircleItem>Learn</SmallCircleItem>
+            <BigCircleItem>
+              <InnerText>
+                Finally, decisions can be made based on data from our internal
+                analytics engine, and forward progress is made.
+              </InnerText>
+            </BigCircleItem>
+          </SmallCircleContainer>
+          <CircleLabelContainer>
+            <CircleLabel>Lean Development</CircleLabel>
+          </CircleLabelContainer>
+        </CircleContainer>
+      </PhilosophyContainer>
     </PageContainer>
   );
 };
 
 const PageContainer = styled.div`
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+`;
+
+const PhilosophyContainer = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  border-bottom: ${globalColors.SecondaryOrange};
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
+
   padding-top: 3rem;
   padding-bottom: 8rem;
 `;
 
+const BackgroundImage = styled.img`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  width: 100vw;
+
+  /* Add the blur effect */
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  opacity: 0.9;
+`;
+
 const MyPrimaryText = styled(PrimaryText)`
   margin-bottom: 5rem;
+  color: ${globalColors.PrimaryWhite};
 `;
 
 const CircleContainer = styled.div`
-  /* @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 6em); */
-  /* margin: 5em auto 0; */
   border: solid 10px ${globalColors.SecondaryOrange};
   position: relative;
   width: 35vw;
@@ -130,13 +151,12 @@ const CircleLabelContainer = styled.div`
 `;
 
 const CircleLabel = styled.h2`
-  /* top: 50%; */
-  /* left: 50%; */
   width: 80%;
   text-align: center;
   color: ${globalColors.PrimaryBlue};
   font-size: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  background-color: white;
 `;
 
 const SmallCircleContainer = styled.div`
