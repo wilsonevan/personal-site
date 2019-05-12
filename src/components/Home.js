@@ -1,25 +1,25 @@
 import React, { useRef } from "react";
 import scrollToComponent from "react-scroll-to-component";
 import Particles from "react-particles-js";
-import { particleParams, particleStyles } from "../../styles/ParticlesStyles";
+import { particleParams, particleStyles } from "../styles/ParticlesStyles";
 import { Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import styled, { keyframes } from "styled-components";
-import image1 from "../../images/barca_4_cropped.jpg";
+import image1 from "../images/barca_4_cropped.jpg";
 import {
   PageContainer,
   PrimaryText,
   SecondaryText,
   TopContainer
-} from "../../styles/GlobalComponents";
-import { globalColors } from "../../styles/GlobalStyles";
+} from "../styles/GlobalComponents";
+import { globalColors } from "../styles/GlobalStyles";
 
 import Navbar from "./Navbar";
-import Profile from "./Profile";
-import Portfolio from "./Portfolio";
-import Overview from "../philosophy/Overview";
-import ContactView from "../contact/ContactView";
+import Profile from "./aboutUs/Profile";
+import Portfolio from "./portfolio/Portfolio";
+import Overview from "./philosophy/Overview";
+import ContactView from "./contact/ContactView";
 
 class Home extends React.Component {
   render() {
@@ -29,80 +29,76 @@ class Home extends React.Component {
           <Navbar
             refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
           />
-          {/* <MyButton
-            onClick={() =>
-              scrollToComponent(this.About, {
-                offset: 0,
-                align: "top",
-                duration: 1500
-              })
-            }
-          /> */}
-          <section
-            ref={section => {
-              this.Top = section;
-            }}
-          >
-            <MyTopContainer>
-              <Particles params={particleParams} style={particleStyles} />
-              <DescriptionContainer>
-                <MySecondaryText>
-                  Strengthening our community by improving opportunities for
-                  lifelong learning through technology.
-                </MySecondaryText>
-                <MyPrimaryText>Cortona Creative</MyPrimaryText>
-              </DescriptionContainer>
-              <Link
-                onClick={() =>
-                  scrollToComponent(this.Philosophy, {
-                    offset: 0,
-                    align: "top",
-                    ease: "inOutCube",
-                    duration: 1000
-                  })
-                }
-              >
-                <NextSlide>
-                  <Icon
-                    size="huge"
-                    color="grey"
-                    fitted
-                    name="angle double down"
-                  />
-                </NextSlide>
-              </Link>
-            </MyTopContainer>
-          </section>
-          <section
-            ref={section => {
-              this.Philosophy = section;
-            }}
-          >
-            <Overview
-              refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
-            />
-          </section>
-          <section
-            ref={section => {
-              this.About = section;
-            }}
-          >
-            <Profile />
-          </section>
-          <section
-            ref={section => {
-              this.Projects = section;
-            }}
-          >
-            <Portfolio />
-          </section>
-          <section
-            ref={section => {
-              this.Contact = section;
-            }}
-          >
-            <ContactView />
-          </section>
+            <section
+              ref={section => {
+                this.Top = section;
+              }}
+            >
+              <MyTopContainer>
+                <Particles params={particleParams} style={particleStyles} />
+                <DescriptionContainer>
+                  <MySecondaryText>
+                    Strengthening our community by improving opportunities for
+                    lifelong learning through technology.
+                  </MySecondaryText>
+                  <MyPrimaryText>Cortona Creative</MyPrimaryText>
+                </DescriptionContainer>
+                <Link
+                  onClick={() =>
+                    scrollToComponent(this.Philosophy, {
+                      offset: 0,
+                      align: "top",
+                      ease: "inOutCube",
+                      duration: 1000
+                    })
+                  }
+                >
+                  <NextSlide>
+                    <Icon
+                      size="huge"
+                      color="grey"
+                      fitted
+                      name="angle double down"
+                    />
+                  </NextSlide>
+                </Link>
+              </MyTopContainer>
+            </section>
+            <section
+              ref={section => {
+                this.Philosophy = section;
+              }}
+            >
+              <Overview
+                refs={[
+                  this.Philosophy,
+                  this.About,
+                  this.Projects,
+                  this.Contact
+                ]}
+              />
+            </section>
+            <section
+              ref={section => {
+                this.About = section;
+              }}
+            >
+              <Profile />
+            </section>
+            <section
+              ref={section => {
+                this.Projects = section;
+              }}
+            >
+              <Portfolio />
+            </section>
+            <section
+              ref={section => {
+                this.Contact = section;
+              }}
+            >
+              <ContactView />
+            </section>
         </PageContainer>
       </>
     );
