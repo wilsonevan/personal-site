@@ -19,6 +19,7 @@ import Navbar from "./Navbar";
 import Profile from "./Profile";
 import Portfolio from "./Portfolio";
 import Overview from "../philosophy/Overview";
+import ContactView from "../contact/ContactView";
 
 class Home extends React.Component {
   render() {
@@ -26,7 +27,7 @@ class Home extends React.Component {
       <>
         <PageContainer>
           <Navbar
-            refs={[this.Philosophy, this.About, this.Projects, this.Top]}
+            refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
           />
           {/* <MyButton
             onClick={() =>
@@ -62,7 +63,12 @@ class Home extends React.Component {
                 }
               >
                 <NextSlide>
-                  <Icon size="huge" color='grey' fitted name="angle double down" />
+                  <Icon
+                    size="huge"
+                    color="grey"
+                    fitted
+                    name="angle double down"
+                  />
                 </NextSlide>
               </Link>
             </MyTopContainer>
@@ -72,7 +78,9 @@ class Home extends React.Component {
               this.Philosophy = section;
             }}
           >
-            <Overview />
+            <Overview
+              refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
+            />
           </section>
           <section
             ref={section => {
@@ -87,6 +95,13 @@ class Home extends React.Component {
             }}
           >
             <Portfolio />
+          </section>
+          <section
+            ref={section => {
+              this.Contact = section;
+            }}
+          >
+            <ContactView />
           </section>
         </PageContainer>
       </>

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { scrollToComponent } from "react-scroll-to-component";
 import { Transition } from "react-transition-group";
 import {
   PrimaryText,
@@ -10,7 +12,7 @@ import { globalColors } from "../../styles/GlobalStyles";
 import beakrLogo from "../../images/beakr_logo.svg";
 import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
 
-const Overview = () => {
+const Overview = props => {
   const calcItemRotation = position => {
     var angle = (360 / 6) * position;
     var rot = 0;
@@ -25,8 +27,19 @@ const Overview = () => {
         <SmallCircleContainer rot={calcItemRotation(0)}>
           <SmallCircleItem>Ideas</SmallCircleItem>
           <BigCircleItem>
-            <InnerText>Let's connect and see what we can do</InnerText>
-            <InnerButton>Contact Us</InnerButton>
+            <InnerText>Your ideas, our resources.</InnerText>
+            {/* <InnerButton
+              onClick={() =>
+                scrollToComponent(props.refs[1], {
+                  offset: 0,
+                  align: "top",
+                  ease: "inOutCube",
+                  duration: 1500
+                })
+              }
+            >
+              Contact Us
+            </InnerButton> */}
           </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(1)}>
@@ -81,7 +94,8 @@ const Overview = () => {
           <SmallCircleItem>Learn</SmallCircleItem>
           <BigCircleItem>
             <InnerText>
-              Finally, decisions can be made based on data from our internal analytics engine, and forward progress is made.
+              Finally, decisions can be made based on data from our internal
+              analytics engine, and we begin the next rev.
             </InnerText>
           </BigCircleItem>
         </SmallCircleContainer>
@@ -104,6 +118,17 @@ const PageContainer = styled.div`
   border-bottom-style: solid;
   padding-top: 3rem;
   padding-bottom: 8rem;
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+
+  /* Full height */
+  /* height: 100%;  */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: ${globalColors.SecondaryGrey}; */
 `;
 
 const MyPrimaryText = styled(PrimaryText)`
@@ -115,8 +140,8 @@ const CircleContainer = styled.div`
   /* margin: 5em auto 0; */
   border: solid 10px ${globalColors.SecondaryOrange};
   position: relative;
-  width: 35vw;
-  height: 35vw;
+  min-width: 35vw;
+  min-height: 35vw;
   padding: 0;
   border-radius: 50%;
   list-style: none;
@@ -136,7 +161,7 @@ const CircleLabel = styled.h2`
   text-align: center;
   color: ${globalColors.PrimaryBlue};
   font-size: 3rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const SmallCircleContainer = styled.div`
@@ -198,13 +223,24 @@ const BigCircleItem = styled(SmallCircleItem)`
 `;
 
 const InnerText = styled.h4`
+  padding-top: 0.3rem;
   font-size: 1.5rem;
   text-align: center;
+  width: 80%;
 `;
 
-const InnerButton = styled.button`
-  margin: 0.5rem;
-`;
+// const InnerButton = styled.button`
+//   margin: 0.5rem;
+//   padding: 0.5rem 1rem 0.5rem 1rem;
+//   background-color: ${globalColors.PrimaryOrange};
+//   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
+//   border-radius: 0.5rem;
+//   font-size: 2rem;
+
+//   :hover {
+//     cursor: pointer;
+//   }
+// `;
 
 const ExperienceContainer = styled.div`
   margin-top: 0.5rem;
