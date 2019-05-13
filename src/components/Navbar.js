@@ -17,7 +17,7 @@ const Navbar = props => {
       <CompactNavMenu>
         <Dropdown button className="icon" size="huge" fluid icon="bars">
           <Dropdown.Menu>
-            <Dropdown.Item>
+            {/* <Dropdown.Item>
               <Link
                 onClick={() =>
                   scrollToComponent(props.refs[0], {
@@ -31,7 +31,7 @@ const Navbar = props => {
               >
                 <Item>How We Work</Item>
               </Link>
-            </Dropdown.Item>
+            </Dropdown.Item> */}
             <Dropdown.Item>
               <Link
                 onClick={() =>
@@ -83,7 +83,7 @@ const Navbar = props => {
 
       <ExpandedNavMenu>
         <Logo src={logo} alt="CCLogo" />
-        <Link
+        {/* <Link
           onClick={() =>
             scrollToComponent(props.refs[0], {
               offset: 0,
@@ -97,7 +97,7 @@ const Navbar = props => {
           <MenuItem>
             <Item>How We Work</Item>
           </MenuItem>
-        </Link>
+        </Link> */}
         <Link
           onClick={() =>
             scrollToComponent(props.refs[1], {

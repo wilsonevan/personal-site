@@ -78,7 +78,7 @@ class Home extends React.Component {
               </DescriptionContainer>
               <Link
                 onClick={() =>
-                  scrollToComponent(this.Philosophy, {
+                  scrollToComponent(this.About, {
                     offset: 0,
                     align: "top",
                     ease: "inOutCube",
@@ -97,7 +97,7 @@ class Home extends React.Component {
               </Link>
             </MyTopContainer>
           </section>
-          <section
+          {/* <section
             ref={section => {
               this.Philosophy = section;
             }}
@@ -105,7 +105,7 @@ class Home extends React.Component {
             <Overview
               refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
             />
-          </section>
+          </section> */}
           <section
             ref={section => {
               this.About = section;
