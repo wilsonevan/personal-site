@@ -151,6 +151,9 @@ const CircleContainer = styled.div`
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     width: 60vw;
     height: 60vw;
+
+  border: solid 5px ${globalColors.SecondaryOrange};
+
   }
 `;
 
@@ -158,12 +161,18 @@ const CircleLabelContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 40vw;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    height: 57vw;
+    
+  }
 `;
 
 const CircleLabel = styled.h2`
-  /* top: 50%; */
-  /* left: 50%; */
+  /* display: relative;
+  top: 50%;
+  left: 50%; */
   width: 80%;
   text-align: center;
   color: ${globalColors.PrimaryBlue};
@@ -171,7 +180,7 @@ const CircleLabel = styled.h2`
   margin-bottom: 2rem;
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -195,7 +204,7 @@ const SmallCircleContainer = styled.div`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     transform: rotate(calc(${props => props.rot} * 1deg))
-      translate(calc(70vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+      translate(calc(65vw / 2)) rotate(calc(${props => props.rot} * -1deg));
   }
 `;
 
@@ -262,8 +271,7 @@ const InnerText = styled.h4`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     font-size: 0.8rem;
-  padding-top: 0.3rem;
-  
+    padding-top: 0.3rem;
   }
 `;
 
@@ -308,7 +316,6 @@ const Logo = styled.img`
     /* margin: 5px 8px 5px 8px; */
     margin: 2px;
   }
-  
 `;
 
 export default Overview;

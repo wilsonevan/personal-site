@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
-import { globalColors } from "../../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import profileImage from "../../images/IMG_1776.jpg";
 import LinkedInIcon from "../../images/In-Blue-96.png";
 import GitHubIcon from "../../images/GitHub-Mark-64px.png";
@@ -81,6 +81,12 @@ const ProfilePic = styled.img`
   opacity: 0.85;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+  max-width: 350px;
+
+  }
+
 `;
 
 const NameContainer = styled.div`

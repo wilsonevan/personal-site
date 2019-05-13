@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { globalColors } from "../../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
 const SkillCard = props => {
   return (
@@ -19,6 +19,10 @@ const CardContainer = styled.div`
   background-color: ${globalColors.PrimaryGreen};
 `;
 
-const CardText = styled.h3``;
+const CardText = styled.h3`
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1rem;
+  }
+`;
 
 export default SkillCard;

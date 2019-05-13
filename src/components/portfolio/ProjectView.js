@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { globalColors } from "../../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import SkillCard from "./SkillCard";
 
 const ProjectView = props => {
@@ -68,6 +68,12 @@ const ProjectContainer = styled.div`
     background-color: ${globalColors.SecondaryBlue};
     transition: background-color 0.2s linear;
   }
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    /* padding: 0.2rem; */
+    height: 25rem;
+  width: 25rem;
+  }
 `;
 
 const EachProject = styled.div`
@@ -83,6 +89,10 @@ const EachProject = styled.div`
 
 const ProjectHeader = styled.h2`
   margin: 0;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProjectDescription = styled.h3`
@@ -129,6 +139,10 @@ const ButtonsContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    padding: 0.5rem;
+  }
 `;
 
 const SupportLink = styled.a``;
@@ -144,6 +158,10 @@ const LinkButton = styled.button`
 
   :hover {
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1rem;
   }
 `;
 

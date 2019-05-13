@@ -151,6 +151,7 @@ const Navbar = props => {
 const NavContainer = styled.div`
   position: absolute;
   top: 0rem;
+  left: 5rem;
   /* width: 100%; */
   z-index: 10;
   padding-top: 2rem;
