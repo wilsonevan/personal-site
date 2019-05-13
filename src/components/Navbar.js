@@ -173,6 +173,7 @@ const Item = styled.h2`
   text-align: center;
   padding: 10px 16px 5px 16px;
   text-decoration: none;
+  font-weight: 500 !important;
   /* z-index: -10; */
 
   :hover {
