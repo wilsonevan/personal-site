@@ -51,12 +51,12 @@ class Home extends React.Component {
   render() {
     return (
       <>
+        <PageContainer>
         <DimmerContainer loaded={this.state.loaded}>
           <Dimmer active inverted>
             <Loader inverted>Loading</Loader>
           </Dimmer>
         </DimmerContainer>
-        <PageContainer loaded={this.state.loaded}>
           <Navbar
             refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
           />
@@ -137,7 +137,7 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  display: ${props => (props.loaded ? "inline" : "none")};
+  /* display: ${props => (props.loaded ? "inherit" : "none")}; */
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     align-items: center;
@@ -147,15 +147,16 @@ const PageContainer = styled.div`
 const ParticlesContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
+
 `;
 
 const DimmerContainer = styled.div`
-  position: absolute;
+  /* position: relative;
   top: 0;
-  left: 0;
+  left: 0; */
   height: 100%;
   width: 100vw;
-  display: ${props => (props.loaded ? "none" : "inline")};
+  display: ${props => (props.loaded ? "none" : "block")};
 `;
 
 const MyTopContainer = styled.div`
@@ -168,6 +169,7 @@ const MyTopContainer = styled.div`
   border-bottom: #a9d3f8;
   border-bottom-width: 3px;
   border-bottom-style: solid;
+  /* z-index: -1; */
 `;
 
 const MyButton = styled.button`
