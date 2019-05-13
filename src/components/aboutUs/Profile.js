@@ -27,9 +27,21 @@ class Profile extends React.Component {
           </NameContainer>
           <AboutContainer>
             <AboutText fontWeight={"bold"}>
-              Here is something about me.
+              My dream is to inspire lifelong learning, advance knowledge, and
+              strengthen my community through teaching truth and cultivating
+              grit. In order to do this, I plan to utilize the power of software
+              in order to build products which empower individuals around the
+              world.
             </AboutText>
-            <AboutText>Here is more about me.</AboutText>
+            <AboutText>
+              Education is by far one of the most effective means for unlocking
+              new opportunities for an individual to achieve their full
+              potential. It is also the key to improving the living conditions
+              of those in developing countries or even poor urban areas. I am
+              dedicated to building tools designed for those who are willing
+              to take the risk themselves and learn new skills that will help them
+              lead their communities from within.
+            </AboutText>  
           </AboutContainer>
         </ProfileContainer>
       </SecondContainer>
@@ -137,6 +149,7 @@ const AboutContainer = styled.div`
 const AboutText = styled.h3`
   font-weight: ${props => props.fontWeight || "lighter"} !important;
   width: 50vw;
+  margin-top: 0.5rem;
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     margin: 0;
