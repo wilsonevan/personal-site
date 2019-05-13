@@ -156,10 +156,6 @@ const NavContainer = styled.div`
   z-index: 10;
   padding-top: 2rem;
   padding-left: 2rem;
-
-  @media (max-width: ${globalSizes.ScreenWidth}) {
-  left: 5rem;
-  }
 `;
 
 const MenuItem = styled.div`

@@ -9,7 +9,6 @@ export const PageContainer = styled.div`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     align-items: center;
-    margin-left: 5rem;
   };
 
 `;
