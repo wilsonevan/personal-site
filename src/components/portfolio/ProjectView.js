@@ -8,7 +8,7 @@ const ProjectView = props => {
     <ProjectContainer>
       <EachProject>
         <ProjectDetails>
-          <Logo src={props.logo} alt="CCLogo" />
+          {props.logo && <Logo src={props.logo} alt="CCLogo" />}
           <ProjectHeader>{props.title}</ProjectHeader>
           <ProjectDescription />
         </ProjectDetails>
@@ -29,16 +29,20 @@ const ProjectView = props => {
         ) : (
           <></>
         )}
-        <ButtonsContainer>
-          <SupportLink href={props.url} target="_blank">
-            <LinkButton>View Site</LinkButton>
-          </SupportLink>
-        </ButtonsContainer>
-        <ButtonsContainer>
-          <SupportLink href={props.github} target="_blank">
-            <LinkButton>GitHub</LinkButton>
-          </SupportLink>
-        </ButtonsContainer>
+        {props.url && (
+          <ButtonsContainer>
+            <SupportLink href={props.url} target="_blank">
+              <LinkButton>View Site</LinkButton>
+            </SupportLink>
+          </ButtonsContainer>
+        )}
+        {props.github && (
+          <ButtonsContainer>
+            <SupportLink href={props.github} target="_blank">
+              <LinkButton>GitHub</LinkButton>
+            </SupportLink>
+          </ButtonsContainer>
+        )}
       </LinksContainer>
     </ProjectContainer>
   );
@@ -98,7 +102,6 @@ const Logo = styled.img`
   width: 4rem;
   margin: 10px 16px 5px 16px;
 `;
-
 
 const SkillsContainer = styled.div`
   display: flex;
@@ -160,12 +163,10 @@ const InstructionsHeader = styled.h3`
   padding: 0.2rem;
   text-decoration: underline;
   margin: 0;
-
 `;
 const Instructions = styled.h4`
   padding: 0.5rem;
   margin: 0;
-
 `;
 
 export default ProjectView;

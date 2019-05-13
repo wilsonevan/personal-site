@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { globalColors } from "../../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
 import Networking from "./Networking";
 import ProjectInquiry from "./ProjectInquiry";
@@ -26,6 +26,11 @@ const PageContainer = styled.div`
   min-height: 80vh;
   padding-top: 3rem;
   padding-bottom: 8rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    /* display: none; */
+  flex-wrap: wrap;
+  }
 `;
 
 const DividerContainer = styled.div`
@@ -34,6 +39,12 @@ const DividerContainer = styled.div`
   align-items: center;
   height: 80vh;
   width: 10%;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    /* display: none; */
+    height: 5%;
+    width: 100%; 
+  }
 `;
 
 const DividerLeft = styled.div`
@@ -41,7 +52,15 @@ const DividerLeft = styled.div`
   margin: 3rem;
   height: 100%;
   width: 5%;
+  
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    border-right: none;
+    border-bottom: 2px solid ${globalColors.SecondaryOrange};
+    height: 5%;
+    width: 100%; 
+  }
 `;
+
 const DividerRight = styled(DividerLeft)`
   border: none;
 `;

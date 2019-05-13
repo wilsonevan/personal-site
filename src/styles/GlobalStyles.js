@@ -15,6 +15,10 @@ const globalColors = {
   PrimaryBlue: "#6AB9FF"
 };
 
+const globalSizes = {
+    ScreenWidth: "700px"
+}
+
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
@@ -44,6 +48,10 @@ h1 {
     padding-bottom: 0.2rem;
     color: ${globalColors.PrimaryRed};
     /* border-bottom: 1px solid #349dc4; */
+
+    @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+        font-size: 3rem !important;
+    };
 }
 
 h2, h3, h4, h5, h6,
@@ -56,4 +64,4 @@ input, select, textarea {
 }
 `;
 
-export { GlobalStyles, globalColors };
+export { GlobalStyles, globalColors, globalSizes };
