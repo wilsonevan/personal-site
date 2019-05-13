@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/cortona_creative_logo_no_background.png";
 import scrollToComponent from "react-scroll-to-component";
-import { globalColors } from "../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../styles/GlobalStyles";
 import { Icon, Button, Dropdown } from "semantic-ui-react";
 
 // import logo from "../images/logos/AG Grenade Only Transparent.svg";
@@ -151,11 +151,15 @@ const Navbar = props => {
 const NavContainer = styled.div`
   position: absolute;
   top: 0rem;
-  left: 5rem;
+  left: 1rem;
   /* width: 100%; */
   z-index: 10;
   padding-top: 2rem;
   padding-left: 2rem;
+
+  @media (max-width: ${globalSizes.ScreenWidth}) {
+  left: 5rem;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -196,7 +200,7 @@ const ExpandedNavMenu = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (max-width: 800px) {
+  @media (max-width: ${globalSizes.ScreenWidth}) {
     display: none;
   }
 `;
@@ -206,7 +210,7 @@ const CompactNavMenu = styled.div`
   width: 10rem;
   height: 5rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: ${globalSizes.ScreenWidth}) {
     display: inline;
   }
 `;
