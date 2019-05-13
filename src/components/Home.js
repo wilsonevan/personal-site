@@ -13,7 +13,7 @@ import {
   SecondaryText,
   TopContainer
 } from "../styles/GlobalComponents";
-import { globalColors } from "../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../styles/GlobalStyles";
 
 import Navbar from "./Navbar";
 import Profile from "./aboutUs/Profile";
@@ -35,7 +35,9 @@ class Home extends React.Component {
               }}
             >
               <MyTopContainer>
+                <ParticlesContainer>
                 <Particles params={particleParams} style={particleStyles} />
+                </ParticlesContainer>
                 <DescriptionContainer>
                   <MySecondaryText>
                     Strengthening our community by improving opportunities for
@@ -114,10 +116,15 @@ class Home extends React.Component {
 //   margin-top: 45vh;
 // `;
 
+const ParticlesContainer = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+`
+
 const MyTopContainer = styled.div`
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -141,13 +148,13 @@ const MyButton = styled.button`
 const MyPrimaryText = styled(PrimaryText)`
   text-align: center;
   font-size: 6rem !important;
-  width: 50rem;
+  width: 80%;
   margin: 0;
 `;
 
 const MySecondaryText = styled(SecondaryText)`
   text-align: center;
-  width: 40rem;
+  width: 80%;
   line-height: 1.5em;
   font-size: 2.2rem;
   /* background-color: rgba(255,255,255,0.3); */

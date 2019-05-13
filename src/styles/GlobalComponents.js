@@ -1,13 +1,15 @@
 import styled from "styled-components";
-import { globalColors } from "./GlobalStyles";
+import { globalColors, globalSizes } from "./GlobalStyles";
 
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  /* width: 100% !important; */
+
 `;
 
-export const TopContainer = styled.section`
+export const TopContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +19,7 @@ export const TopContainer = styled.section`
   border-bottom-style: solid;
 `;
 
-export const SecondContainer = styled.section`
+export const SecondContainer = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 80vh;
@@ -28,14 +30,29 @@ export const SecondContainer = styled.section`
   border-bottom: ${globalColors.SecondaryBlue};
   border-bottom-width: 3px;
   border-bottom-style: solid;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    };
+
 `;
 
 export const PrimaryText = styled.h1`
   padding-bottom: 0.5rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+        font-size: 3rem !important;
+    };
 `;
 
 export const SecondaryText = styled.h2`
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   line-height: 2.5rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+        font-size: 1.5rem !important;
+    };
 `;

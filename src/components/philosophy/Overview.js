@@ -133,6 +133,7 @@ const PageContainer = styled.div`
 
 const MyPrimaryText = styled(PrimaryText)`
   margin-bottom: 5rem;
+  text-align: center;
 `;
 
 const CircleContainer = styled.div`
