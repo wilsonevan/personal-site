@@ -22,6 +22,7 @@ export const TopContainer = styled.div`
 export const SecondContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-height: 80vh;
   width: 100%;
   background-position: center;

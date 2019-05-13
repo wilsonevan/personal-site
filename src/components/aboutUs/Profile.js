@@ -35,7 +35,7 @@ const AboutHeader = styled(PrimaryText)`
   position: relative;
   min-width: 500px;
   max-height: 100px;
-  top: 450px;
+  top: 150px;
   left: 0;
   /* text-decoration: underline; */
 
@@ -64,7 +64,7 @@ const ProfileImage = styled.img`
   /* height: auto;
   width: auto; */
   width: 500px;
-  height: 600px;
+  height: 500px;
   opacity: 0.85;
   position: relative;
   right: 400px;

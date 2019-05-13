@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { globalColors } from "../../styles/GlobalStyles";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
 const ProjectInquiry = () => {
   return (
@@ -38,14 +38,23 @@ const SectionContainer = styled.div`
   justify-content: center;
   align-items: left;
   max-width: 50%;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    max-width: 80%;
+  }
 `;
 const SectionHeader = styled.h1`
   padding-bottom: 3rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    text-align: center;
+  }
 `;
 
 const DetailsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   margin-top:1rem;
 `;
