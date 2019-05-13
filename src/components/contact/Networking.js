@@ -6,50 +6,51 @@ import profileImage from "../../images/IMG_1776.jpg";
 import LinkedInIcon from "../../images/In-Blue-96.png";
 import GitHubIcon from "../../images/GitHub-Mark-64px.png";
 
-const Networking = () => {
-  return (
-    <NetworkingContainer>
-      <SectionHeader>Connect</SectionHeader>
-      <ContactContainer>
-        <ProfilePic src={profileImage} alt="profileImage" />
-        <NameContainer>
-          <Name fontWeight={"900"}>Evan Wilson, </Name>
-          <Name fontWeight={"500"}>Product Guy</Name>
-        </NameContainer>
-        <ItemContainer>
-          <Icon size={"large"} name={"map marker alternate"} />
-          <Description>Salt Lake City, UT</Description>
-        </ItemContainer>
-        <ItemContainer>
-          <Icon size={"large"} name={"phone"} />
-          <Description>+1-801-664-7172</Description>
-        </ItemContainer>
-        <ItemContainer>
-          <Icon size={"large"} name={"mail"} />
-          <Description>evan@cortonacreative.com</Description>
-        </ItemContainer>
-        <ItemContainer>
-          <CompanyIcon src={LinkedInIcon} alt="linkedInIcon" />
-          <SupportLink
-            href="https://www.linkedin.com/in/wilson-evan/"
-            target="_blank"
-          >
-            <Description>https://www.linkedin.com/in/wilson-evan/</Description>
-          </SupportLink>
-        </ItemContainer>
-        <ItemContainer>
-          <CompanyIcon src={GitHubIcon} alt="GitHubIcon" />
-          <SupportLink
-            href="https://github.com/wilsonevan"
-            target="_blank"
-          >
-          <Description>https://github.com/wilsonevan</Description>
-          </SupportLink>
-        </ItemContainer>
-      </ContactContainer>
-    </NetworkingContainer>
-  );
-};
+class Networking extends React.Component {
+  render() {
+    return (
+      <NetworkingContainer>
+        <SectionHeader>Connect</SectionHeader>
+        <ContactContainer>
+          <ProfilePic src={profileImage} alt="profileImage" onLoad={() => this.props.updateLoader(1)}/>
+          <NameContainer>
+            <Name fontWeight={"900"}>Evan Wilson, </Name>
+            <Name fontWeight={"500"}>Product Guy</Name>
+          </NameContainer>
+          <ItemContainer>
+            <Icon size={"large"} name={"map marker alternate"} />
+            <Description>Salt Lake City, UT</Description>
+          </ItemContainer>
+          <ItemContainer>
+            <Icon size={"large"} name={"phone"} />
+            <Description>+1-801-664-7172</Description>
+          </ItemContainer>
+          <ItemContainer>
+            <Icon size={"large"} name={"mail"} />
+            <Description>evan@cortonacreative.com</Description>
+          </ItemContainer>
+          <ItemContainer>
+            <CompanyIcon src={LinkedInIcon} alt="linkedInIcon" />
+            <SupportLink
+              href="https://www.linkedin.com/in/wilson-evan/"
+              target="_blank"
+            >
+              <Description>
+                https://www.linkedin.com/in/wilson-evan/
+              </Description>
+            </SupportLink>
+          </ItemContainer>
+          <ItemContainer>
+            <CompanyIcon src={GitHubIcon} alt="GitHubIcon" />
+            <SupportLink href="https://github.com/wilsonevan" target="_blank">
+              <Description>https://github.com/wilsonevan</Description>
+            </SupportLink>
+          </ItemContainer>
+        </ContactContainer>
+      </NetworkingContainer>
+    );
+  }
+}
 
 const NetworkingContainer = styled.div`
   display: flex;
@@ -83,10 +84,8 @@ const ProfilePic = styled.img`
   border-top-right-radius: 0.5rem;
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-  max-width: 350px;
-
+    max-width: 350px;
   }
-
 `;
 
 const NameContainer = styled.div`

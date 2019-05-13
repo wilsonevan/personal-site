@@ -2,13 +2,12 @@ import React, { useRef } from "react";
 import scrollToComponent from "react-scroll-to-component";
 import Particles from "react-particles-js";
 import { particleParams, particleStyles } from "../styles/ParticlesStyles";
-import { Icon } from "semantic-ui-react";
+import { Icon, Loader, Dimmer } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import styled, { keyframes } from "styled-components";
 import image1 from "../images/barca_4_cropped.jpg";
 import {
-  PageContainer,
   PrimaryText,
   SecondaryText,
   TopContainer
@@ -22,104 +21,142 @@ import Overview from "./philosophy/Overview";
 import ContactView from "./contact/ContactView";
 
 class Home extends React.Component {
+  state = { totalImages: 2, imageArr: [], loaded: false };
+
+  componentDidMount() {
+    // Populate the ImageArr with ALL FALSE
+    var newArr = [];
+    for (var i = 0; i < this.state.totalImages; i = i + 1) {
+      newArr.push(false);
+    }
+    this.setState({ imageArr: newArr });
+  }
+
+  updateLoader = n => {
+    var newArr = this.state.imageArr;
+    newArr[n] = true;
+
+    this.setState({ imageArr: newArr }, () => {
+      // Once the state has been updated with the new array, test for whether the entire array is loaded.
+      if (
+        !this.state.imageArr.find(function(element) {
+          return false;
+        })
+      ) {
+        this.setState({ loaded: true });
+      }
+    });
+  };
+
   render() {
     return (
       <>
-        <PageContainer>
+        <DimmerContainer loaded={this.state.loaded}>
+          <Dimmer active inverted>
+            <Loader inverted>Loading</Loader>
+          </Dimmer>
+        </DimmerContainer>
+        <PageContainer loaded={this.state.loaded}>
           <Navbar
             refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
           />
-            <section
-              ref={section => {
-                this.Top = section;
-              }}
-            >
-              <MyTopContainer>
-                <ParticlesContainer>
+          <section
+            ref={section => {
+              this.Top = section;
+            }}
+          >
+            <MyTopContainer>
+              <ParticlesContainer>
                 <Particles params={particleParams} style={particleStyles} />
-                </ParticlesContainer>
-                <DescriptionContainer>
-                  <MySecondaryText>
-                    Strengthening our community by improving opportunities for
-                    lifelong learning through technology.
-                  </MySecondaryText>
-                  <MyPrimaryText>Cortona Creative</MyPrimaryText>
-                </DescriptionContainer>
-                <Link
-                  onClick={() =>
-                    scrollToComponent(this.Philosophy, {
-                      offset: 0,
-                      align: "top",
-                      ease: "inOutCube",
-                      duration: 1000
-                    })
-                  }
-                >
-                  <NextSlide>
-                    <Icon
-                      size="huge"
-                      color="grey"
-                      fitted
-                      name="angle double down"
-                    />
-                  </NextSlide>
-                </Link>
-              </MyTopContainer>
-            </section>
-            <section
-              ref={section => {
-                this.Philosophy = section;
-              }}
-            >
-              <Overview
-                refs={[
-                  this.Philosophy,
-                  this.About,
-                  this.Projects,
-                  this.Contact
-                ]}
-              />
-            </section>
-            <section
-              ref={section => {
-                this.About = section;
-              }}
-            >
-              <Profile />
-            </section>
-            <section
-              ref={section => {
-                this.Projects = section;
-              }}
-            >
-              <Portfolio />
-            </section>
-            <section
-              ref={section => {
-                this.Contact = section;
-              }}
-            >
-              <ContactView />
-            </section>
+              </ParticlesContainer>
+              <DescriptionContainer>
+                <MySecondaryText>
+                  Strengthening our community by improving opportunities for
+                  lifelong learning through technology.
+                </MySecondaryText>
+                <MyPrimaryText>Cortona Creative</MyPrimaryText>
+              </DescriptionContainer>
+              <Link
+                onClick={() =>
+                  scrollToComponent(this.Philosophy, {
+                    offset: 0,
+                    align: "top",
+                    ease: "inOutCube",
+                    duration: 1000
+                  })
+                }
+              >
+                <NextSlide>
+                  <Icon
+                    size="huge"
+                    color="grey"
+                    fitted
+                    name="angle double down"
+                  />
+                </NextSlide>
+              </Link>
+            </MyTopContainer>
+          </section>
+          <section
+            ref={section => {
+              this.Philosophy = section;
+            }}
+          >
+            <Overview
+              refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
+            />
+          </section>
+          <section
+            ref={section => {
+              this.About = section;
+            }}
+          >
+            <Profile updateLoader={this.updateLoader} />
+          </section>
+          <section
+            ref={section => {
+              this.Projects = section;
+            }}
+          >
+            <Portfolio updateLoader={this.updateLoader} />
+          </section>
+          <section
+            ref={section => {
+              this.Contact = section;
+            }}
+          >
+            <ContactView updateLoader={this.updateLoader} />
+          </section>
         </PageContainer>
       </>
     );
   }
 }
 
-// const LeftTextContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   color: white;
-//   margin-left: 18vw;
-//   margin-top: 45vh;
-// `;
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: ${props => (props.loaded ? "inline" : "none")};
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    align-items: center;
+  }
+`;
 
 const ParticlesContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-`
+`;
+
+const DimmerContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  display: ${props => (props.loaded ? "none" : "inline")};
+`;
 
 const MyTopContainer = styled.div`
   position: relative;
@@ -165,7 +202,6 @@ const MySecondaryText = styled(SecondaryText)`
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     width: 80%;
   }
-  
 `;
 
 const DescriptionContainer = styled.div`
@@ -183,7 +219,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const pulse = keyframes`
-    0% {
+  0% {
     -moz-box-shadow: 0 0 0 0 ${globalColors.SecondaryBlue};
     box-shadow: 0 0 0 0 ${globalColors.SecondaryBlue};
   }

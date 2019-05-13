@@ -5,18 +5,20 @@ import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import Networking from "./Networking";
 import ProjectInquiry from "./ProjectInquiry";
 
-const ContactView = () => {
-  return (
-    <PageContainer>
-      <Networking />
-      <DividerContainer>
-        <DividerLeft />
-        {/* <DividerRight /> */}
-      </DividerContainer>
-      <ProjectInquiry />
-    </PageContainer>
-  );
-};
+class ContactView extends React.Component {
+  render() {
+    return (
+      <PageContainer>
+        <Networking updateLoader={this.props.updateLoader}/>
+        <DividerContainer>
+          <DividerLeft />
+          {/* <DividerRight /> */}
+        </DividerContainer>
+        <ProjectInquiry />
+      </PageContainer>
+    );
+  }
+}
 
 const PageContainer = styled.div`
   display: flex;
@@ -29,7 +31,7 @@ const PageContainer = styled.div`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     /* display: none; */
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 `;
 
@@ -43,7 +45,7 @@ const DividerContainer = styled.div`
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     /* display: none; */
     height: 5%;
-    width: 100%; 
+    width: 100%;
   }
 `;
 
@@ -52,12 +54,12 @@ const DividerLeft = styled.div`
   margin: 3rem;
   height: 100%;
   width: 5%;
-  
+
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     border-right: none;
     border-bottom: 2px solid ${globalColors.SecondaryOrange};
     height: 5%;
-    width: 100%; 
+    width: 100%;
   }
 `;
 
