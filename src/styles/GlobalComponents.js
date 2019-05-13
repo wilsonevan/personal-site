@@ -7,6 +7,11 @@ export const PageContainer = styled.div`
   justify-content: flex-start;
   /* width: 100% !important; */
 
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    align-items: center;
+    margin-left: 5rem;
+  };
+
 `;
 
 export const TopContainer = styled.div`

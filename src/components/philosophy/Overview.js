@@ -8,7 +8,8 @@ import {
   SecondaryText,
   TopContainer
 } from "../../styles/GlobalComponents";
-import { globalColors } from "../../styles/GlobalStyles";
+import ProjectView from "../portfolio/ProjectView";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import beakrLogo from "../../images/beakr_logo.svg";
 import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
 
@@ -78,7 +79,7 @@ const Overview = props => {
               We utilize modern sales and marketing practices to quickly test
               product in various channels to gain quick feedback
             </InnerText>
-            <ExperienceContainer />
+            {/* <ExperienceContainer /> */}
           </BigCircleItem>
         </SmallCircleContainer>
         <SmallCircleContainer rot={calcItemRotation(4)}>
@@ -112,7 +113,7 @@ const PageContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   border-bottom: ${globalColors.SecondaryOrange};
   border-bottom-width: 3px;
   border-bottom-style: solid;
@@ -141,11 +142,16 @@ const CircleContainer = styled.div`
   /* margin: 5em auto 0; */
   border: solid 10px ${globalColors.SecondaryOrange};
   position: relative;
-  min-width: 35vw;
-  min-height: 35vw;
+  min-width: 40vw;
+  min-height: 40vw;
   padding: 0;
   border-radius: 50%;
   list-style: none;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    width: 60vw;
+    height: 60vw;
+  }
 `;
 
 const CircleLabelContainer = styled.div`
@@ -163,6 +169,10 @@ const CircleLabel = styled.h2`
   color: ${globalColors.PrimaryBlue};
   font-size: 3rem;
   margin-bottom: 2rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SmallCircleContainer = styled.div`
@@ -177,11 +187,16 @@ const SmallCircleContainer = styled.div`
   margin: calc(-6rem / 2);
 
   transform: rotate(calc(${props => props.rot} * 1deg))
-    translate(calc(33vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+    translate(calc(37vw / 2)) rotate(calc(${props => props.rot} * -1deg));
 
   /* :hover {
     transition: display 0.2s linear;
   } */
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    transform: rotate(calc(${props => props.rot} * 1deg))
+      translate(calc(70vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+  }
 `;
 
 // const Circle = styled.div``
@@ -202,6 +217,14 @@ const SmallCircleItem = styled.div`
     display: none;
     transition: opacity 0.5s linear;
   }
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    width: 7rem;
+    height: 7rem;
+    margin: calc(-7rem / 2);
+  font-size: 1.5rem;
+  
+  }
 `;
 
 const BigCircleItem = styled(SmallCircleItem)`
@@ -221,6 +244,14 @@ const BigCircleItem = styled(SmallCircleItem)`
     display: flex;
     transition: opacity 0.5s linear;
   }
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    width: 12rem;
+    height: 12rem;
+    margin: calc(-12rem / 2);
+    font-size: 1.5rem;
+  }
+
 `;
 
 const InnerText = styled.h4`
@@ -228,6 +259,12 @@ const InnerText = styled.h4`
   font-size: 1.5rem;
   text-align: center;
   width: 80%;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 0.8rem;
+  padding-top: 0.3rem;
+  
+  }
 `;
 
 // const InnerButton = styled.button`
@@ -266,6 +303,12 @@ const Logo = styled.img`
   height: 4rem;
   width: 4rem;
   margin: 10px 16px 5px 16px;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    /* margin: 5px 8px 5px 8px; */
+    margin: 2px;
+  }
+  
 `;
 
 export default Overview;
