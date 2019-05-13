@@ -1,18 +1,6 @@
 import styled from "styled-components";
 import { globalColors, globalSizes } from "./GlobalStyles";
 
-export const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* width: 100% !important; */
-
-  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    align-items: center;
-  };
-
-`;
-
 export const TopContainer = styled.div`
   display: flex;
   justify-content: center;

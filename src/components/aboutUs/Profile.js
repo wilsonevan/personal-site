@@ -10,24 +10,32 @@ import {
 } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
-const Profile = () => {
-  return (
-    <SecondContainer>
-      <AboutHeader>About Us</AboutHeader>
-      <ProfileImage src={profileImage} alt="profileImage" />
-      <ProfileContainer>
-        <NameContainer>
-          <ProfileName>Evan</ProfileName>
-          <ProfileName leftIndent={"3rem;"}>Wilson</ProfileName>
-        </NameContainer>
-        <AboutContainer>
-          <AboutText fontWeight={"bold"}>Here is something about me.</AboutText>
-          <AboutText>Here is more about me.</AboutText>
-        </AboutContainer>
-      </ProfileContainer>
-    </SecondContainer>
-  );
-};
+class Profile extends React.Component {
+  render() {
+    return (
+      <SecondContainer>
+        <AboutHeader>About Us</AboutHeader>
+        <ProfileImage
+          src={profileImage}
+          alt="profileImage"
+          onLoad={() => this.props.updateLoader(0)}
+        />
+        <ProfileContainer>
+          <NameContainer>
+            <ProfileName>Evan</ProfileName>
+            <ProfileName leftIndent={"3rem;"}>Wilson</ProfileName>
+          </NameContainer>
+          <AboutContainer>
+            <AboutText fontWeight={"bold"}>
+              Here is something about me.
+            </AboutText>
+            <AboutText>Here is more about me.</AboutText>
+          </AboutContainer>
+        </ProfileContainer>
+      </SecondContainer>
+    );
+  }
+}
 
 const AboutHeader = styled(PrimaryText)`
   /* color: ${globalColors.PrimaryRed}; */
