@@ -196,7 +196,7 @@ const SmallCircleContainer = styled.div`
   margin: calc(-6rem / 2);
 
   transform: rotate(calc(${props => props.rot} * 1deg))
-    translate(calc(37vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+    translate(calc(40vw / 2)) rotate(calc(${props => props.rot} * -1deg));
 
   /* :hover {
     transition: display 0.2s linear;
