@@ -24,7 +24,7 @@ class Home extends React.Component {
   state = { totalImages: 2, imageArr: [], loaded: false };
 
   componentDidMount() {
-    // Populate the ImageArr with ALL FALSE
+    // Intiailize the ImageArr by populating with ALL FALSE values
     var newArr = [];
     for (var i = 0; i < this.state.totalImages; i = i + 1) {
       newArr.push(false);
@@ -51,12 +51,10 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <PageContainer>
         <DimmerContainer loaded={this.state.loaded}>
-          <Dimmer active inverted>
-            <Loader inverted>Loading</Loader>
-          </Dimmer>
-        </DimmerContainer>
+          <Loader active inline="centered" />
+        </DimmerContainer >
+        <PageContainer loaded={this.state.loaded}>
           <Navbar
             refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
           />
@@ -66,9 +64,11 @@ class Home extends React.Component {
             }}
           >
             <MyTopContainer>
-              <ParticlesContainer>
-                <Particles params={particleParams} style={particleStyles} />
-              </ParticlesContainer>
+              {this.state.loaded && (
+                <ParticlesContainer>
+                  <Particles params={particleParams} style={particleStyles} />
+                </ParticlesContainer>
+              )}
               <DescriptionContainer>
                 <MySecondaryText>
                   Strengthening our community by improving opportunities for
@@ -137,7 +137,11 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* display: ${props => (props.loaded ? "inherit" : "none")}; */
+  /* display: ${props => (props.loaded ? "initial" : "none")}; */
+  visibility: ${props => (props.loaded ? "visible" : "hidden")};
+  opacity: ${props => (props.loaded ? 1 : 0)};
+
+  transition: visibility 1s, opacity 1.5s linear;
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     align-items: center;
@@ -147,16 +151,20 @@ const PageContainer = styled.div`
 const ParticlesContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-
 `;
 
 const DimmerContainer = styled.div`
-  /* position: relative;
+  position: absolute;
+  z-index: 100;
   top: 0;
-  left: 0; */
-  height: 100%;
+  left: 0;
+  height: 100vh;
   width: 100vw;
-  display: ${props => (props.loaded ? "none" : "block")};
+  display: ${props => (props.loaded ? "none" : "flex")};
+  opacity: 0.5;
+  justify-content: center;
+  align-items: center;
+  background-color: ${globalColors.PrimaryWhite} !important;
 `;
 
 const MyTopContainer = styled.div`
