@@ -195,7 +195,7 @@ const MyButton = styled.button`
 const MyPrimaryText = styled(PrimaryText)`
   text-align: center;
   font-size: 6rem !important;
-  width: 80%;
+  width: 60%;
   margin: 0;
 `;
 
@@ -204,6 +204,7 @@ const MySecondaryText = styled(SecondaryText)`
   width: 40%;
   line-height: 1.5em;
   font-size: 2.2rem;
+  font-weight: 500 !important;
   /* background-color: rgba(255,255,255,0.3); */
   /* box-shadow:  0 0 50px rgba(255,255,255,0.3); */
   padding-bottom: 1.5rem;

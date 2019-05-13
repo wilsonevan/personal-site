@@ -178,6 +178,8 @@ const CircleLabel = styled.h2`
   color: ${globalColors.PrimaryBlue};
   font-size: 3rem;
   margin-bottom: 2rem;
+  font-weight: 500 !important;
+
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     font-size: 1.8rem;
