@@ -46,6 +46,7 @@ h1 {
     font-weight: 1200 !important;
     font-size: 4rem !important;
     padding-bottom: 0.2rem;
+    /* word-spacing: 1.2rem; */
     color: ${globalColors.PrimaryRed};
     /* border-bottom: 1px solid #349dc4; */
 

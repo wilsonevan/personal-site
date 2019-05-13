@@ -195,7 +195,7 @@ const MyButton = styled.button`
 const MyPrimaryText = styled(PrimaryText)`
   text-align: center;
   font-size: 6rem !important;
-  width: 80%;
+  width: 60%;
   margin: 0;
 `;
 
