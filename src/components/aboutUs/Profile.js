@@ -14,7 +14,7 @@ class Profile extends React.Component {
   render() {
     return (
       <SecondContainer>
-        <AboutHeader>About Us</AboutHeader>
+        <AboutHeader>About Me</AboutHeader>
         <ProfileImage
           src={profileImage}
           alt="profileImage"

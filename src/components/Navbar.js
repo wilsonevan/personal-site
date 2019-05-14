@@ -44,7 +44,7 @@ const Navbar = props => {
                 }
                 style={{ maxWidth: "15rem" }}
               >
-                <Item>About Us</Item>
+                <Item>About Me</Item>
               </Link>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -74,7 +74,7 @@ const Navbar = props => {
                 }
                 style={{ maxWidth: "15rem" }}
               >
-                <Item>Contact Us</Item>
+                <Item>Contact</Item>
               </Link>
             </Dropdown.Item>
           </Dropdown.Menu>
@@ -110,7 +110,7 @@ const Navbar = props => {
           style={{ maxWidth: "15rem" }}
         >
           <MenuItem>
-            <Item>About Us</Item>
+            <Item>About Me</Item>
           </MenuItem>
         </Link>
         <Link

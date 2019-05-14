@@ -14,8 +14,8 @@ class Networking extends React.Component {
         <ContactContainer>
           <ProfilePic src={profileImage} alt="profileImage" onLoad={() => this.props.updateLoader(1)}/>
           <NameContainer>
-            <Name fontWeight={"900"}>Evan Wilson, </Name>
-            <Name fontWeight={"500"}>Product Guy</Name>
+            <Name fontWeight={"900"}>Evan Wilson</Name>
+            <Role fontWeight={"500"}>Lead Engineer | Software Dev | MBA Student</Role>
           </NameContainer>
           <ItemContainer>
             <Icon size={"large"} name={"map marker alternate"} />
@@ -90,6 +90,7 @@ const ProfilePic = styled.img`
 
 const NameContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -102,6 +103,13 @@ const Name = styled.h4`
   margin-left: 0.4rem;
   font-size: 1.5rem;
 `;
+
+const Role = styled.h5`
+  font-weight: ${props => props.fontWeight || 500} !important;
+  margin: 0;
+  margin-left: 0.4rem;
+  font-size: 1.1rem;
+`
 
 const ItemContainer = styled.div`
   display: flex;

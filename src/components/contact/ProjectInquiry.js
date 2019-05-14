@@ -25,8 +25,7 @@ const ProjectInquiry = () => {
         </ListItem>
       </DetailsList>
       <SectionDetails>
-        And a member of our team will follow up with you personally, within 24
-        hours.
+        And I will follow up with you personally within 48 hours.
       </SectionDetails>
     </SectionContainer>
   );
@@ -56,7 +55,7 @@ const DetailsContainer = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
-  margin-top:1rem;
+  margin-top: 1rem;
 `;
 const SectionDetails = styled.h2`
   margin: 0;
