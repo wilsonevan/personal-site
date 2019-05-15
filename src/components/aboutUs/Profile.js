@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import profileImage from "../../images/evan_profile.jpg";
 import {
-  PageContainer,
   PrimaryText,
   SecondaryText,
-  TopContainer,
   SecondContainer
 } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
@@ -13,7 +11,7 @@ import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 class Profile extends React.Component {
   render() {
     return (
-      <SecondContainer>
+      <MySecondContainer>
         <AboutHeader>About Me</AboutHeader>
         <ProfileImage
           src={profileImage}
@@ -38,16 +36,22 @@ class Profile extends React.Component {
               new opportunities for an individual to achieve their full
               potential. It is also the key to improving the living conditions
               of those in developing countries or even poor urban areas. I am
-              dedicated to building tools designed for those who are willing
-              to take the risk themselves and learn new skills that will help them
+              dedicated to building tools designed for those who are willing to
+              take the risk themselves and learn new skills that will help them
               lead their communities from within.
-            </AboutText>  
+            </AboutText>
           </AboutContainer>
         </ProfileContainer>
-      </SecondContainer>
+      </MySecondContainer>
     );
   }
 }
+
+const MySecondContainer = styled(SecondContainer)`
+  position: relative;
+  background-color: ${globalColors.PrimaryWhite} !important;
+  /* z-index: 10; */
+`
 
 const AboutHeader = styled(PrimaryText)`
   /* color: ${globalColors.PrimaryRed}; */

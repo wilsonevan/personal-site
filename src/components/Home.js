@@ -68,7 +68,7 @@ class Home extends React.Component {
               loaded={this.state.loaded}
             />
           </section>
-          {/* <section
+          <section
             ref={section => {
               this.Philosophy = section;
             }}
@@ -76,7 +76,7 @@ class Home extends React.Component {
             <Overview
               refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
             />
-          </section> */}
+          </section>
           <section
             ref={section => {
               this.About = section;

@@ -12,17 +12,20 @@ export const TopContainer = styled.div`
 `;
 
 export const SecondContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 80vh;
   width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: ${globalSizes.PrimaryBlue} !important;
+  /* background-position: center;
+  background-size: cover; */
+  /* background-attachment: fixed; */
   border-bottom: ${globalColors.SecondaryBlue};
   border-bottom-width: 3px;
   border-bottom-style: solid;
+  z-index: 10;
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     justify-content: flex-start;
