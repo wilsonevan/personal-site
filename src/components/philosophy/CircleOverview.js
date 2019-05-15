@@ -35,7 +35,7 @@ const Overview = props => {
       <SmallCircleContainer rot={calcItemRotation(1)}>
         <SmallCircleItem>Build</SmallCircleItem>
         <BigCircleItem>
-          <InnerText>Experience in</InnerText>
+          <InnerText>Typical turnaround time is under 1 week.</InnerText>
         </BigCircleItem>
       </SmallCircleContainer>
       <SmallCircleContainer rot={calcItemRotation(2)}>
@@ -53,7 +53,7 @@ const Overview = props => {
         <BigCircleItem>
           <InnerText>
             We utilize modern sales and marketing practices to quickly test
-            product in various channels to gain quick feedback
+            product in various channels to gain quick feedback.
           </InnerText>
           {/* <ExperienceContainer /> */}
         </BigCircleItem>
@@ -88,8 +88,8 @@ const CircleContainer = styled.div`
   /* margin: 5em auto 0; */
   border: solid 10px ${globalColors.SecondaryOrange};
   position: relative;
-  min-width: 40vw;
-  min-height: 40vw;
+  min-width: 30vw;
+  min-height: 30vw;
   margin: 5rem;
   border-radius: 50%;
   list-style: none;
@@ -106,7 +106,7 @@ const CircleLabelContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vw;
+  height: 26vw;
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     height: 57vw;
@@ -141,7 +141,7 @@ const SmallCircleContainer = styled.div`
   margin: calc(-6rem / 2);
 
   transform: rotate(calc(${props => props.rot} * 1deg))
-    translate(calc(40vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+    translate(calc(30vw / 2)) rotate(calc(${props => props.rot} * -1deg));
 
   /* :hover {
     transition: display 0.2s linear;

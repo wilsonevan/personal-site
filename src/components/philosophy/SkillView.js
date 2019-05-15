@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Dots from "./Dots";
+import { globalColors, globalSizes } from "../../styles/GlobalStyles";
+
 
 const SkillView = props => {
   return (
@@ -27,8 +29,12 @@ const SkillContainer = styled.div`
 
 const SkillName = styled.h3`
   width: 10rem;
-  font-weight: 700;
+  font-weight: 500 !important;
   margin: 0;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1rem;
+  }
 `;
 
 const DotsContainer = styled.div`

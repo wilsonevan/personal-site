@@ -9,16 +9,18 @@ import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import BGImage from "../../images/philosophy-section-background.png";
 import CircleOverview from "./CircleOverview";
 import Skills from "./Skills";
+import SoftSkills from "./SoftSkills";
 
 const Overview = props => {
   return (
     <>
       <Background src={BGImage} alt="LinesBGImage" />
       <PageContainer>
-        <MyPrimaryText>How We Work</MyPrimaryText>
+        <MyPrimaryText>What I do</MyPrimaryText>
         <DisplayContainer>
           <CircleOverview />
           <Skills />
+          <SoftSkills />
         </DisplayContainer>
       </PageContainer>
     </>
@@ -65,8 +67,12 @@ const Background = styled.img`
 `;
 
 const MyPrimaryText = styled(PrimaryText)`
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   text-align: center;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const DisplayContainer = styled.div`

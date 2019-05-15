@@ -59,6 +59,8 @@ const ProjectsContainer = styled(SecondContainer)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 60vh;
+  padding-bottom: 3rem;
 `;
 
 const PortfolioHeader = styled.h1`

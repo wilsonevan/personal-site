@@ -13,20 +13,13 @@ const Skills = () => {
   return (
     <>
       <SkillsContainer>
-        <TextContainer>
-          <MySecondaryText>Full Stack Web Developer</MySecondaryText>
-          <MySecondaryText>& Computer Engineer</MySecondaryText>
-        </TextContainer>
-        <SkillView rating={5} name={"Reactjs"} />
-        <SkillView rating={5} name={"Ruby on Rails"} />
-        <SkillView rating={4} name={"Raw SQL"} />
-        <SkillView rating={4} name={"HTML/CSS"} />
-        <SkillView rating={3} name={"C"} />
-        <SkillView rating={3} name={"Javascript"} />
-        <SkillView rating={3} name={"Assembly"} />
-        <SkillView rating={3} name={"PostgreSQL"} />
-        <SkillView rating={2} name={"Python"} />
-        <SkillView rating={2} name={"Matlab"} />
+        <MySecondaryText>Product Management</MySecondaryText>
+        <SkillView rating={5} name={"Project Management"} />
+        <SkillView rating={5} name={"Technical Customer Support"} />
+        <SkillView rating={4} name={"Technical Sales"} />
+        <SkillView rating={3} name={"QA/QC Validation"} />
+        <SkillView rating={3} name={"Product Marketing"} />
+        <SkillView rating={3} name={"Backend Architecture"} />
       </SkillsContainer>
     </>
   );
@@ -42,8 +35,6 @@ const SkillsContainer = styled.div`
   height: 42rem;
   min-width: 25rem;
 
-  /* width: 25rem; */
-
   border-top: 1px solid ${globalColors.SecondaryBlue};
   border-left: 1px solid ${globalColors.SecondaryBlue};
   border-right: 3px solid ${globalColors.SecondaryBlue};
@@ -51,21 +42,18 @@ const SkillsContainer = styled.div`
   border-radius: 0.5rem;
 
   background-color: ${globalColors.PrimaryWhite};
+
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     height: 35rem;
   }
 `;
 
-const TextContainer = styled.div`
-  padding: 0.5rem;
-  margin-bottom: 0.8rem;
-`;
-
 const MySecondaryText = styled(SecondaryText)`
   margin: 0;
-  line-height: 2rem;
-  text-align: center;
+  padding: 0.5rem;
   font-weight: 800 !important;
-`;
+  margin-bottom: 0.5rem;
+
+`
 
 export default Skills;
