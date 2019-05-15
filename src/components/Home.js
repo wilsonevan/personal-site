@@ -1,15 +1,8 @@
-import React, { useRef } from "react";
-import scrollToComponent from "react-scroll-to-component";
+import React from "react";
 
-import { Icon, Loader, Dimmer } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Loader } from "semantic-ui-react";
 
-import styled, { keyframes } from "styled-components";
-import {
-  PrimaryText,
-  SecondaryText,
-  TopContainer
-} from "../styles/GlobalComponents";
+import styled from "styled-components";
 import { globalColors, globalSizes } from "../styles/GlobalStyles";
 
 import Navbar from "./Navbar";
@@ -132,7 +125,5 @@ const DimmerContainer = styled.div`
   align-items: center;
   background-color: ${globalColors.PrimaryWhite} !important;
 `;
-
-
 
 export default Home;

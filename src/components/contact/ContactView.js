@@ -12,7 +12,6 @@ class ContactView extends React.Component {
         <Networking updateLoader={this.props.updateLoader}/>
         <DividerContainer>
           <DividerLeft />
-          {/* <DividerRight /> */}
         </DividerContainer>
         <ProjectInquiry />
       </PageContainer>
@@ -61,10 +60,6 @@ const DividerLeft = styled.div`
     height: 5%;
     width: 100%;
   }
-`;
-
-const DividerRight = styled(DividerLeft)`
-  border: none;
 `;
 
 export default ContactView;

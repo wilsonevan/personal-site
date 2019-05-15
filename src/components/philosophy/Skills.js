@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  PrimaryText,
-  SecondaryText,
-  TopContainer
-} from "../../styles/GlobalComponents";
+import { SecondaryText } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
 import SkillView from "./SkillView";

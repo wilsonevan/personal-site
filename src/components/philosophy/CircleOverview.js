@@ -110,6 +110,8 @@ const CircleLabelContainer = styled.div`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     height: 57vw;
+  padding-bottom: 2rem;
+
   }
 `;
 
@@ -226,17 +228,6 @@ const ExperienceContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-`;
-
-const ExperienceItem = styled.div`
-  margin: 0.2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  opacity: 0.8;
-  background-color: ${globalColors.PrimaryGreen};
-  max-height: 2rem;
-  font-size: 1rem;
 `;
 
 const Logo = styled.img`

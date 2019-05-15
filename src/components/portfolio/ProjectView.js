@@ -165,10 +165,6 @@ const LinkButton = styled.button`
   }
 `;
 
-const LinkHeader = styled.h3`
-  text-align: center;
-`;
-
 const InstructionsContainer = styled.div`
   display: flex;
   flex-direction: column;

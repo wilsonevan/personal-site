@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Dots from "./Dots";
-import { globalColors, globalSizes } from "../../styles/GlobalStyles";
+import { globalSizes } from "../../styles/GlobalStyles";
 
 
 const SkillView = props => {

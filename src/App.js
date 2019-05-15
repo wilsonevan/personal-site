@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import Home from "./components/Home";
 import NoMatch from "./components/NoMatch";
-import Footer from "./components/Footer";
 // import Overview from './components/philosophy/Overview'
 // import { MyTheme } from "./styles/MyTheme";
 
@@ -16,7 +15,6 @@ function App() {
         {/* <Route exact path="/overview" component={Overview} /> */}
         <Route component={NoMatch} />
       </Switch>
-      {/* <Footer /> */}
     </>
   );
 }

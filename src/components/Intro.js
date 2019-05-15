@@ -3,12 +3,10 @@ import styled, { keyframes } from "styled-components";
 import Particles from "react-particles-js";
 import { particleParams, particleStyles } from "../styles/ParticlesStyles";
 import scrollToComponent from "react-scroll-to-component";
-import image1 from "../images/barca_4_cropped.jpg";
 import { globalColors, globalSizes } from "../styles/GlobalStyles";
 import {
   PrimaryText,
   SecondaryText,
-  TopContainer
 } from "../styles/GlobalComponents";
 
 import { Icon } from "semantic-ui-react";
@@ -84,10 +82,14 @@ const DescriptionContainer = styled.div`
 `;
 
 const MyPrimaryText = styled(PrimaryText)`
-  text-align: center;
+  text-align: center !important;
   font-size: 6rem !important;
   width: 60%;
   margin: 0;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    width: 80%;
+  }
 `;
 
 const MySecondaryText = styled(SecondaryText)`

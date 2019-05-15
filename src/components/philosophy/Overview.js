@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {
   PrimaryText,
-  SecondaryText,
-  TopContainer
 } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import BGImage from "../../images/philosophy-section-background.png";
@@ -56,6 +54,10 @@ position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: ${globalColors.SecondaryGrey}; */
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    padding-bottom: 2rem;
+  }
 `;
 
 const Background = styled.img`
