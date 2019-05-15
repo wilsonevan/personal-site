@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import profileImage from "../../images/evan_profile.jpg";
 import {
-  PageContainer,
   PrimaryText,
   SecondaryText,
-  TopContainer,
   SecondContainer
 } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
@@ -13,7 +11,7 @@ import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 class Profile extends React.Component {
   render() {
     return (
-      <SecondContainer>
+      <MySecondContainer>
         <AboutHeader>About Me</AboutHeader>
         <ProfileImage
           src={profileImage}
@@ -38,16 +36,24 @@ class Profile extends React.Component {
               new opportunities for an individual to achieve their full
               potential. It is also the key to improving the living conditions
               of those in developing countries or even poor urban areas. I am
-              dedicated to building tools designed for those who are willing
-              to take the risk themselves and learn new skills that will help them
+              dedicated to building tools designed for those who are willing to
+              take the risk themselves and learn new skills that will help them
               lead their communities from within.
-            </AboutText>  
+            </AboutText>
           </AboutContainer>
         </ProfileContainer>
-      </SecondContainer>
+      </MySecondContainer>
     );
   }
 }
+
+const MySecondContainer = styled(SecondContainer)`
+  position: relative;
+  background-color: ${globalColors.PrimaryWhite} !important;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  /* z-index: 10; */
+`;
 
 const AboutHeader = styled(PrimaryText)`
   /* color: ${globalColors.PrimaryRed}; */
@@ -141,6 +147,7 @@ const AboutContainer = styled.div`
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     right: 0px;
     padding: 1rem;
+    align-items: center;
     /* height: auto;
     max-width: 50vw; */
   }
@@ -153,6 +160,10 @@ const AboutText = styled.h3`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     margin: 0;
+    font-size: 1rem;
+    width: 80%;
+    margin-bottom: 1rem;
+
     /* height: auto;
     max-width: 50vw; */
   }

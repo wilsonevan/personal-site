@@ -4,20 +4,15 @@ import styled from "styled-components";
 import logo from "../images/cortona_creative_logo_no_background.png";
 import scrollToComponent from "react-scroll-to-component";
 import { globalColors, globalSizes } from "../styles/GlobalStyles";
-import { Icon, Button, Dropdown } from "semantic-ui-react";
-
-// import logo from "../images/logos/AG Grenade Only Transparent.svg";
-// import { Button, Icon, Sidebar, Menu } from "semantic-ui-react";
+import { Dropdown } from "semantic-ui-react";
 
 const Navbar = props => {
-  // const { toggleMenu, setToggleMenu } = setState(false);
-
   return (
     <NavContainer>
       <CompactNavMenu>
         <Dropdown button className="icon" size="huge" fluid icon="bars">
           <Dropdown.Menu>
-            {/* <Dropdown.Item>
+            <Dropdown.Item>
               <Link
                 onClick={() =>
                   scrollToComponent(props.refs[0], {
@@ -29,9 +24,9 @@ const Navbar = props => {
                 }
                 style={{ maxWidth: "15rem" }}
               >
-                <Item>How We Work</Item>
+                <Item>What I Do</Item>
               </Link>
-            </Dropdown.Item> */}
+            </Dropdown.Item>
             <Dropdown.Item>
               <Link
                 onClick={() =>
@@ -83,7 +78,7 @@ const Navbar = props => {
 
       <ExpandedNavMenu>
         <Logo src={logo} alt="CCLogo" />
-        {/* <Link
+        <Link
           onClick={() =>
             scrollToComponent(props.refs[0], {
               offset: 0,
@@ -95,9 +90,9 @@ const Navbar = props => {
           style={{ maxWidth: "20rem" }}
         >
           <MenuItem>
-            <Item>How We Work</Item>
+            <Item>What I Do</Item>
           </MenuItem>
-        </Link> */}
+        </Link>
         <Link
           onClick={() =>
             scrollToComponent(props.refs[1], {

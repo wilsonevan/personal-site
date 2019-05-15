@@ -6,59 +6,74 @@ import { globalColors } from "../../styles/GlobalStyles";
 import ProjectView from "./ProjectView";
 import beakrLogo from "../../images/beakr_logo.svg";
 import AGLogo from "../../images/AG LOGO Vector-COM.jpg";
+import BGImage from "../../images/philosophy-section-background.png";
 
 class Portfolio extends React.Component {
   render() {
     return (
-      <ProjectsContainer>
-        <PortfolioHeader>Portfolio</PortfolioHeader>
-        <EachProject>
-          <ProjectView
-            title={"Beakr LMS for Coding Bootcamps"}
-            github={"https://github.com/devpointlabs/beakr"}
-            url={"https://beakr-dpl.herokuapp.com/"}
-            instructions={[
-              "1. Remember you may need to wait 15s for the server to boot up.",
-              '2. For Teacher Views, use test@test.com with password: "password"',
-              '3. For Student Views, evanstudent@test.com with password: "password"'
-            ]}
-            logo={beakrLogo}
-            skills={[
-              "Reactjs",
-              "Ruby on Rails",
-              "Raw SQL",
-              "PostgreSQL",
-              "HTML/CSS",
-              "Twilio",
-              "Cloudinary",
-              "Chartjs",
-              "Devise",
-              "React Hooks"
-            ]}
-          />
-          <ProjectView
-            title={"Audio-Grenade Website & Store"}
-            github={"https://github.com/wilsonevan/audio_grenade3"}
-            url={"https://dev-audio-grenade.netlify.com/"}
-            logo={AGLogo}
-            skills={[
-              "Reactjs",
-              "HTML/CSS",
-              "BigCommerce",
-              "Freshworks",
-              "React Hooks"
-            ]}
-          />
-        </EachProject>
-      </ProjectsContainer>
+      <>
+        <Background src={BGImage} alt="LinesBGImage" />
+
+        <ProjectsContainer>
+          <PortfolioHeader>Portfolio</PortfolioHeader>
+          <EachProject>
+            <ProjectView
+              title={"Beakr LMS for Coding Bootcamps"}
+              github={"https://github.com/devpointlabs/beakr"}
+              url={"https://beakr-dpl.herokuapp.com/"}
+              instructions={[
+                "1. Remember you may need to wait 15s for the server to boot up.",
+                '2. For Teacher Views, use test@test.com with password: "password"',
+                '3. For Student Views, evanstudent@test.com with password: "password"'
+              ]}
+              logo={beakrLogo}
+              skills={[
+                "Reactjs",
+                "Ruby on Rails",
+                "Raw SQL",
+                "PostgreSQL",
+                "HTML/CSS",
+                "Twilio",
+                "Cloudinary",
+                "Chartjs",
+                "Devise",
+                "React Hooks"
+              ]}
+            />
+            <ProjectView
+              title={"Audio-Grenade Website & Store"}
+              github={"https://github.com/wilsonevan/audio_grenade3"}
+              url={"https://dev-audio-grenade.netlify.com/"}
+              logo={AGLogo}
+              skills={[
+                "Reactjs",
+                "HTML/CSS",
+                "BigCommerce",
+                "Freshworks",
+                "React Hooks"
+              ]}
+            />
+          </EachProject>
+        </ProjectsContainer>
+      </>
     );
   }
 }
+
+const Background = styled.img`
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  opacity: 0.2;
+  z-index: -1;
+`;
 
 const ProjectsContainer = styled(SecondContainer)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-height: 60vh;
+  padding-bottom: 3rem;
 `;
 
 const PortfolioHeader = styled.h1`
