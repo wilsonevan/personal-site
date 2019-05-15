@@ -27,6 +27,8 @@ const PageContainer = styled.div`
   min-height: 80vh;
   padding-top: 3rem;
   padding-bottom: 8rem;
+  background-color: ${globalColors.PrimaryWhite};
+
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     /* display: none; */

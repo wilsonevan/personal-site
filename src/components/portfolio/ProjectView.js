@@ -63,6 +63,8 @@ const ProjectContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
+  background-color: ${globalColors.PrimaryWhite};
+
 
   :hover {
     background-color: ${globalColors.SecondaryBlue};
