@@ -49,7 +49,7 @@ class Home extends React.Component {
         </DimmerContainer>
         <PageContainer loaded={this.state.loaded}>
           <Navbar
-            refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
+            refs={[this.Overview, this.About, this.Projects, this.Contact]}
           />
           <section
             ref={section => {
@@ -57,7 +57,7 @@ class Home extends React.Component {
             }}
           >
             <Intro
-              refs={[this.Philosophy]}
+              refs={[this.Overview]}
               updateLoader={this.updateLoader}
               loaded={this.state.loaded}
             />
@@ -70,7 +70,6 @@ class Home extends React.Component {
             <Overview
               refs={[
                 this.Overview,
-                this.Philosophy,
                 this.About,
                 this.Projects,
                 this.Contact
