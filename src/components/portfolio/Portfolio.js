@@ -12,8 +12,7 @@ class Portfolio extends React.Component {
   render() {
     return (
       <>
-        <Background src={BGImage} alt="LinesBGImage" />
-
+        <Background src={BGImage} alt="LinesBGImage" onLoad={() => this.props.updateLoader(3)} />
         <ProjectsContainer>
           <PortfolioHeader>Portfolio</PortfolioHeader>
           <EachProject>

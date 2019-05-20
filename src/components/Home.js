@@ -10,10 +10,11 @@ import Intro from "./Intro";
 import Profile from "./aboutUs/Profile";
 import Portfolio from "./portfolio/Portfolio";
 import Overview from "./philosophy/Overview";
+// import How from './philosophy/How';
 import ContactView from "./contact/ContactView";
 
 class Home extends React.Component {
-  state = { totalImages: 2, imageArr: [], loaded: false };
+  state = { totalImages: 4, imageArr: [], loaded: false };
 
   componentDidMount() {
     // Intiailize the ImageArr by populating with ALL FALSE values
@@ -56,19 +57,42 @@ class Home extends React.Component {
             }}
           >
             <Intro
-              refs={[this.About]}
+              refs={[this.Philosophy]}
               updateLoader={this.updateLoader}
               loaded={this.state.loaded}
             />
           </section>
           <section
             ref={section => {
-              this.Philosophy = section;
+              this.Overview = section;
             }}
           >
             <Overview
-              refs={[this.Philosophy, this.About, this.Projects, this.Contact]}
+              refs={[
+                this.Overview,
+                this.Philosophy,
+                this.About,
+                this.Projects,
+                this.Contact
+              ]}
+              updateLoader={this.updateLoader}
             />
+          </section>
+          {/* <section
+            ref={section => {
+              this.Philosophy = section;
+            }}
+          >
+            <How
+              refs={[this.Overview, this.Philosophy, this.About, this.Projects, this.Contact]}
+            />
+          </section> */}
+          <section
+            ref={section => {
+              this.Projects = section;
+            }}
+          >
+            <Portfolio updateLoader={this.updateLoader} />
           </section>
           <section
             ref={section => {
@@ -76,13 +100,6 @@ class Home extends React.Component {
             }}
           >
             <Profile updateLoader={this.updateLoader} />
-          </section>
-          <section
-            ref={section => {
-              this.Projects = section;
-            }}
-          >
-            <Portfolio updateLoader={this.updateLoader} />
           </section>
           <section
             ref={section => {
