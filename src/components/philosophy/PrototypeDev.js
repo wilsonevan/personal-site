@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  PrimaryText,
-} from "../../styles/GlobalComponents";
+import { PrimaryText } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import BGImage from "../../images/philosophy-section-background.png";
 import CircleOverview from "./CircleOverview";
@@ -14,11 +12,13 @@ const Overview = props => {
     <>
       <Background src={BGImage} alt="LinesBGImage" />
       <PageContainer>
-        <MyPrimaryText>My Philosophy</MyPrimaryText>
+        <MyPrimaryText>Rapid Development</MyPrimaryText>
         <DisplayContainer>
           <CircleOverview />
-          <Skills />
-          <SoftSkills />
+          <SkillsContainer>
+            <SoftSkills />
+            <Skills />
+          </SkillsContainer>
         </DisplayContainer>
       </PageContainer>
     </>
@@ -26,9 +26,6 @@ const Overview = props => {
 };
 
 const PageContainer = styled.div`
-position: relative;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -38,7 +35,7 @@ position: relative;
   border-bottom-width: 3px;
   border-bottom-style: solid;
   padding-top: 3rem;
-  padding-bottom: 8rem;
+  /* padding-bottom: 8rem; */
 
   /* background-image: url(${BGImage}); */
   /* opacity: 0.5; */
@@ -60,12 +57,25 @@ position: relative;
   }
 `;
 
+const SkillsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
 const Background = styled.img`
   position: absolute;
   width: 100vw;
   min-height: 100vh;
-  opacity: 0.1;
+  max-height: 100vh;
+  opacity: 0.2;
   z-index: -1;
+  background-repeat: repeat-y;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    max-height: none;
+  }
 `;
 
 const MyPrimaryText = styled(PrimaryText)`

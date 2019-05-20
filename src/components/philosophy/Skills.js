@@ -1,44 +1,44 @@
 import React from "react";
 import styled from "styled-components";
-import { SecondaryText } from "../../styles/GlobalComponents";
+import {
+  SecondaryText,
+} from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
-import SkillView from "./SkillView";
+import SkillCard from '../portfolio/SkillCard'
 
 const Skills = () => {
   return (
     <>
-      <SkillsContainer>
-        <TextContainer>
-          <MySecondaryText>Full Stack Web Developer</MySecondaryText>
-          <MySecondaryText>& Computer Engineer</MySecondaryText>
-        </TextContainer>
-        <SkillView rating={5} name={"Reactjs"} />
-        <SkillView rating={5} name={"Ruby on Rails"} />
-        <SkillView rating={4} name={"Raw SQL"} />
-        <SkillView rating={4} name={"HTML/CSS"} />
-        <SkillView rating={3} name={"C"} />
-        <SkillView rating={3} name={"Javascript"} />
-        <SkillView rating={3} name={"Assembly"} />
-        <SkillView rating={3} name={"PostgreSQL"} />
-        <SkillView rating={2} name={"Python"} />
-        <SkillView rating={2} name={"Matlab"} />
-      </SkillsContainer>
+      <OuterSkillsContainer>
+        <MySecondaryText>Specializing In:</MySecondaryText>
+        <InnerSkillsContainer>
+        <SkillCard skill={"Reactjs"} />
+        <SkillCard skill={"Ruby on Rails"} />
+        <SkillCard skill={"Raw SQL"} />
+        <SkillCard skill={"HTML/CSS"} />
+        <SkillCard skill={"C"} />
+        <SkillCard skill={"Javascript"} />
+        <SkillCard skill={"Assembly"} />
+        <SkillCard skill={"PostgreSQL"} />
+        <SkillCard skill={"Python"} />
+        <SkillCard skill={"Matlab"} />
+        </InnerSkillsContainer>
+      </OuterSkillsContainer>  
     </>
   );
 };
 
-const SkillsContainer = styled.div`
+const OuterSkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 2rem;
   margin: 0.5rem;
-  height: 42rem;
-  min-width: 25rem;
-
-  /* width: 25rem; */
+  min-height: 20rem;
+  min-width: 50vw;
+  width: 50rem;
 
   border-top: 1px solid ${globalColors.SecondaryBlue};
   border-left: 1px solid ${globalColors.SecondaryBlue};
@@ -47,21 +47,26 @@ const SkillsContainer = styled.div`
   border-radius: 0.5rem;
 
   background-color: ${globalColors.PrimaryWhite};
+
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    height: 35rem;
+    max-width: none;
   }
 `;
 
-const TextContainer = styled.div`
-  padding: 0.5rem;
-  margin-bottom: 0.8rem;
-`;
+const InnerSkillsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`
+
 
 const MySecondaryText = styled(SecondaryText)`
   margin: 0;
-  line-height: 2rem;
-  text-align: center;
+  padding: 0.3rem;
   font-weight: 800 !important;
-`;
+  /* margin-bottom: 0.5rem; */
+
+`
 
 export default Skills;

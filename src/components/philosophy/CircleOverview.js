@@ -15,7 +15,10 @@ const Overview = props => {
   return (
     <CircleContainer>
       <SmallCircleContainer rot={calcItemRotation(0)}>
-        <SmallCircleItem>Ideas</SmallCircleItem>
+        <SmallCircleItem>
+          <Number>Step 1:</Number>
+          <CircleText>Ideas</CircleText>
+        </SmallCircleItem>
         <BigCircleItem>
           <InnerText>Your ideas, our resources.</InnerText>
           {/* <InnerButton
@@ -33,13 +36,19 @@ const Overview = props => {
         </BigCircleItem>
       </SmallCircleContainer>
       <SmallCircleContainer rot={calcItemRotation(1)}>
-        <SmallCircleItem>Build</SmallCircleItem>
+        <SmallCircleItem>
+          <Number>Step 2:</Number>
+          <CircleText>Build</CircleText>
+        </SmallCircleItem>
         <BigCircleItem>
-          <InnerText>Typical turnaround time is under 1 week.</InnerText>
+          <InnerText>Typical turnaround time for a new software rev is 1-2 weeks.</InnerText>
         </BigCircleItem>
       </SmallCircleContainer>
       <SmallCircleContainer rot={calcItemRotation(2)}>
-        <SmallCircleItem>Product</SmallCircleItem>
+        <SmallCircleItem>
+          <Number>Step 3:</Number>
+          <CircleText>Product</CircleText>
+        </SmallCircleItem>
         <BigCircleItem>
           <InnerText>Check out our previous projects:</InnerText>
           <ExperienceContainer>
@@ -49,7 +58,10 @@ const Overview = props => {
         </BigCircleItem>
       </SmallCircleContainer>
       <SmallCircleContainer rot={calcItemRotation(3)}>
-        <SmallCircleItem>Measure</SmallCircleItem>
+        <SmallCircleItem>
+          <Number>Step 4:</Number>
+          <CircleText>Measure</CircleText>
+        </SmallCircleItem>
         <BigCircleItem>
           <InnerText>
             We utilize modern sales and marketing practices to quickly test
@@ -59,20 +71,26 @@ const Overview = props => {
         </BigCircleItem>
       </SmallCircleContainer>
       <SmallCircleContainer rot={calcItemRotation(4)}>
-        <SmallCircleItem>Data</SmallCircleItem>
+        <SmallCircleItem>
+          <Number>Step 5:</Number>
+          <CircleText>Data</CircleText>
+        </SmallCircleItem>
         <BigCircleItem>
           <InnerText>
-            By gathering sales and marketing data and utlizing entrepreneurial
-            accounting, we are able to quickly make changes and decisions.
+            By using entrepreneurial accounting, we are able to quickly analyze and present the data.
           </InnerText>
         </BigCircleItem>
       </SmallCircleContainer>
       <SmallCircleContainer rot={calcItemRotation(5)}>
         <SmallCircleItem>Learn</SmallCircleItem>
+        <SmallCircleItem>
+          <Number>Step 6:</Number>
+          <CircleText>Innovate</CircleText>
+        </SmallCircleItem>
         <BigCircleItem>
           <InnerText>
-            Finally, decisions can be made based on data from our internal
-            analytics engine, and we begin the next rev.
+            Finally, decisions are made using data from our internal
+            analytics engine, and we can start on the next rev.
           </InnerText>
         </BigCircleItem>
       </SmallCircleContainer>
@@ -94,7 +112,15 @@ const CircleContainer = styled.div`
   border-radius: 50%;
   list-style: none;
 
-  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+  @media only screen and (max-width: 1200px) {
+    width: 40vw;
+    height: 40vw;
+
+    border: solid 5px ${globalColors.SecondaryOrange};
+  }
+
+
+  @media only screen and (max-width: 900px) {
     width: 60vw;
     height: 60vw;
 
@@ -108,10 +134,14 @@ const CircleLabelContainer = styled.div`
   align-items: center;
   height: 26vw;
 
-  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    height: 57vw;
-  padding-bottom: 2rem;
+  @media only screen and (max-width: 1200px) {
+    height: 37vw;
+    padding-bottom: 2rem;
+  }
 
+  @media only screen and (max-width: 900px) {
+    height: 57vw;
+    padding-bottom: 2rem;
   }
 `;
 
@@ -125,6 +155,10 @@ const CircleLabel = styled.h2`
   font-size: 3rem;
   margin-bottom: 2rem;
   font-weight: 500 !important;
+
+  /* @media only screen and (max-width: 1200px) {
+    font-size: 1.8rem !important;
+  } */
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     font-size: 1.8rem;
@@ -149,7 +183,12 @@ const SmallCircleContainer = styled.div`
     transition: display 0.2s linear;
   } */
 
-  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+  @media only screen and (max-width: 1200px) {
+    transform: rotate(calc(${props => props.rot} * 1deg))
+      translate(calc(35vw / 2)) rotate(calc(${props => props.rot} * -1deg));
+  }
+
+  @media only screen and (max-width: 900px) {
     transform: rotate(calc(${props => props.rot} * 1deg))
       translate(calc(65vw / 2)) rotate(calc(${props => props.rot} * -1deg));
   }
@@ -165,9 +204,9 @@ const SmallCircleItem = styled.div`
   /* border: 1px solid ${globalColors.PrimaryBlue}; */
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
 
   ${SmallCircleContainer}:hover & {
     display: none;
@@ -180,6 +219,28 @@ const SmallCircleItem = styled.div`
     margin: calc(-7rem / 2);
   font-size: 1.5rem;
   
+  }
+`;
+
+const Number = styled.h4`
+  /* position: absolute;
+  top: 0;
+  left: 40%; */
+  margin: 0;
+  font-weight: 300 !important;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1rem;
+  }
+`;
+
+const CircleText = styled.h2`
+  margin: 0;
+  padding: 0.2rem;
+  font-weight: 800 !important;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1rem;
   }
 `;
 

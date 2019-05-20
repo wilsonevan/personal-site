@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { PrimaryText } from "../../styles/GlobalComponents";
+import {Link} from 'react-router-dom';
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import BGImage from "../../images/philosophy-section-background.png";
 import Image1 from "../../images/architecture-black-and-white-buildings-1437493.jpg";
@@ -23,8 +24,9 @@ class Overview extends React.Component {
             </ImagesContainer>
             <OuterTextContainer>
               <InnerTextContainer>
+                <Link to="/development">
                 <Header>Rapid Prototype Development</Header>
-                <Header>Agile Project Management</Header>
+                </Link>
                 <Header>Business Development</Header>
                 <Header>Technical Product Support</Header>
               </InnerTextContainer>
