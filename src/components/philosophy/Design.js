@@ -45,7 +45,7 @@ const Design = () => {
               <SectionImage src={agOld} alt="code-screenshot" />
             </OneSideContainer>
             <VSContainer>
-              <SecondaryText border={"none"}>vs</SecondaryText>
+              <SecondaryText border={"none"} margin={"5rem"}>vs</SecondaryText>
             </VSContainer>
             <OneSideContainer>
               <SecondaryText>NEW</SecondaryText>
@@ -97,6 +97,7 @@ const InnerContainer = styled.div`
 const DesignHeader = styled.h1`
   padding-top: 3rem;
   padding-bottom: 1rem;
+  text-align: center;
 `;
 
 const ImageContainer = styled.div`
@@ -181,6 +182,10 @@ const PrimaryText = styled.h1`
   border-bottom: ${props => props.border || ""};
   border-right: ${props => props.border || ""};
   padding: 0.5rem;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    text-align: center;
+  }
 `;
 
 const SecondaryText = styled.h3`
@@ -195,6 +200,11 @@ const SecondaryText = styled.h3`
   border-top: 1px solid ${globalColors.PrimaryRed}; */
   border-bottom: ${props => props.border || ""};
   border-top: ${props => props.border || ""};
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    margin-right: ${props => props.margin || 0};
+    margin-left: ${props => props.margin || 0};
+  }
 `;
 
 export default Design;
