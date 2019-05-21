@@ -24,8 +24,8 @@ class Overview extends React.Component {
             <Link to="/development">
               <Header>Rapid Prototype Development</Header>
             </Link>
-            <Link to="/business">
-              <Header>Business Development</Header>
+            <Link to="/user-experience">
+              <Header>UX Design & Analysis</Header>
             </Link>
             <Link to="/support">
               <Header>Technical Product Support</Header>
@@ -124,8 +124,8 @@ const Header = styled.h2`
   font-weight: 700 !important;
   color: ${globalColors.PrimaryGrey};
   margin: 0;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 
   :hover {
     color: ${globalColors.PrimaryRed};
