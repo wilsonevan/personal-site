@@ -52,59 +52,20 @@ const PageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   border-bottom: ${globalColors.SecondaryOrange};
   border-bottom-width: 3px;
   border-bottom-style: solid;
-
-
-/*   
-  filter: blur(8px);
-  -webkit-filter: blur(8px); */
-
-  /* Full height */
-  /* height: 100%;  */
-
-  /* Center and scale the image nicely */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-  /* background-color: ${globalColors.SecondaryGrey}; */
-
-  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    /* padding-bottom: 2rem; */
-  }
 `;
 
-// const Background = styled.img`
-//   position: absolute;
-//   width: 100vw;
-//   min-height: 100vh;
-//   opacity: 0.1;
-//   z-index: -1;
-// `;
-
-// const ImagesContainer = styled.div`
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100vw;
-//   /* min-height: 60vh; */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   z-index: -10;
-// `;
 
 const InnerTextContainer = styled.div`
-  /* position: relative;
-  top: 25%; */
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 80%;
 `;
 
 const MyPrimaryText = styled(PrimaryText)`
@@ -123,8 +84,7 @@ const Header = styled.h2`
   font-weight: 700 !important;
   color: ${globalColors.PrimaryGrey};
   margin: 0;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  padding-bottom: 1rem;
 
   :hover {
     color: ${globalColors.PrimaryRed};
