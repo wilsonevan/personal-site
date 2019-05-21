@@ -4,20 +4,32 @@ import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 
 import Networking from "./Networking";
 import ProjectInquiry from "./ProjectInquiry";
+import BGImage from "../../images/philosophy-section-background.png";
 
 class ContactView extends React.Component {
   render() {
     return (
-      <PageContainer>
-        <Networking updateLoader={this.props.updateLoader}/>
-        <DividerContainer>
-          <DividerLeft />
-        </DividerContainer>
-        <ProjectInquiry />
-      </PageContainer>
+      <>
+        <Background src={BGImage} alt="LinesBGImage" />
+        <PageContainer>
+          <Networking updateLoader={this.props.updateLoader} />
+          <DividerContainer>
+            <DividerLeft />
+          </DividerContainer>
+          <ProjectInquiry />
+        </PageContainer>
+      </>
     );
   }
 }
+
+const Background = styled.img`
+  position: absolute;
+  width: 100vw;
+  min-height: 80vh;
+  opacity: 0.1;
+  /* z-index: -1; */
+`;
 
 const PageContainer = styled.div`
   display: flex;
@@ -27,8 +39,7 @@ const PageContainer = styled.div`
   min-height: 80vh;
   padding-top: 3rem;
   padding-bottom: 8rem;
-  background-color: ${globalColors.PrimaryWhite};
-
+  /* background-color: ${globalColors.PrimaryWhite}; */
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     /* display: none; */

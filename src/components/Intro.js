@@ -24,8 +24,7 @@ class Intro extends React.Component {
           )}
           <DescriptionContainer>
             <MySecondaryText>
-              Strengthening my community by improving opportunities for lifelong
-              learning through technology.
+              Building web tools that empower individuals and strengthen my community.
             </MySecondaryText>
             <MyPrimaryText>Cortona Creative</MyPrimaryText>
           </DescriptionContainer>

@@ -30,21 +30,6 @@ const Navbar = props => {
             <Dropdown.Item>
               <Link
                 onClick={() =>
-                  scrollToComponent(props.refs[1], {
-                    offset: 0,
-                    align: "top",
-                    ease: "inOutCube",
-                    duration: 1500
-                  })
-                }
-                style={{ maxWidth: "15rem" }}
-              >
-                <Item>About Me</Item>
-              </Link>
-            </Dropdown.Item>
-            <Dropdown.Item>
-              <Link
-                onClick={() =>
                   scrollToComponent(props.refs[2], {
                     offset: 0,
                     align: "top",
@@ -55,6 +40,21 @@ const Navbar = props => {
                 style={{ maxWidth: "15rem" }}
               >
                 <Item>Portfolio</Item>
+              </Link>
+            </Dropdown.Item>
+            <Dropdown.Item>
+              <Link
+                onClick={() =>
+                  scrollToComponent(props.refs[1], {
+                    offset: 0,
+                    align: "top",
+                    ease: "inOutCube",
+                    duration: 1500
+                  })
+                }
+                style={{ maxWidth: "15rem" }}
+              >
+                <Item>About Me</Item>
               </Link>
             </Dropdown.Item>
             <Dropdown.Item>
@@ -95,21 +95,6 @@ const Navbar = props => {
         </Link>
         <Link
           onClick={() =>
-            scrollToComponent(props.refs[1], {
-              offset: 0,
-              align: "top",
-              ease: "inOutCube",
-              duration: 1500
-            })
-          }
-          style={{ maxWidth: "15rem" }}
-        >
-          <MenuItem>
-            <Item>About Me</Item>
-          </MenuItem>
-        </Link>
-        <Link
-          onClick={() =>
             scrollToComponent(props.refs[2], {
               offset: 0,
               align: "top",
@@ -121,6 +106,21 @@ const Navbar = props => {
         >
           <MenuItem>
             <Item>Portfolio</Item>
+          </MenuItem>
+        </Link>
+        <Link
+          onClick={() =>
+            scrollToComponent(props.refs[1], {
+              offset: 0,
+              align: "top",
+              ease: "inOutCube",
+              duration: 1500
+            })
+          }
+          style={{ maxWidth: "15rem" }}
+        >
+          <MenuItem>
+            <Item>About Me</Item>
           </MenuItem>
         </Link>
         <Link

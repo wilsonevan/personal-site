@@ -25,7 +25,7 @@ const ProjectInquiry = () => {
         </ListItem>
       </DetailsList>
       <SectionDetails>
-        And I will follow up with you personally within 48 hours.
+        And I will follow up with you personally within 1-2 days.
       </SectionDetails>
     </SectionContainer>
   );
@@ -65,6 +65,7 @@ const EmailDetails = styled.h2`
   margin: 0;
   margin-left: 1rem;
   color: ${globalColors.PrimaryRed};
+  z-index: 10;
 `;
 
 const DetailsList = styled.ul`
