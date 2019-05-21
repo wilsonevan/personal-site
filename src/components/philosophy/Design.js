@@ -13,11 +13,13 @@ const Design = () => {
   return (
     <>
       <PageContainer>
-        <DesignHeader>UX Design & Analysis</DesignHeader>
+        <DesignHeader>User Experience</DesignHeader>
         <SectionContainer>
           <InnerContainer alignment={"flex-end"}>
             <RightTextContainer>
-              <PrimaryText>Custom Charts and Analytics</PrimaryText>
+              <PrimaryText align={"right"}>
+                Custom Charts and Analytics
+              </PrimaryText>
             </RightTextContainer>
             <ImageContainer>
               <SectionImage src={gradesImage} alt="charts-image" />
@@ -35,7 +37,7 @@ const Design = () => {
         <SectionContainer>
           {/* <InnerContainer> */}
           <RightTextContainer>
-            <PrimaryText border={"none"}>UI/UX Makeovers</PrimaryText>
+            <PrimaryText border={"none"}>UX Makeovers</PrimaryText>
           </RightTextContainer>
           <ComparisonContainer>
             <OneSideContainer>
@@ -66,7 +68,7 @@ const PageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: ${globalColors.PrimaryWhite}; */
+  /* background-color: ${globalColors.SecondaryGrey}; */
 `;
 
 const SectionContainer = styled.div`
@@ -160,36 +162,39 @@ const RightTextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 25%;
-  margin: 0.5rem;
+  margin: 1rem;
 `;
 
 const VSContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0.5rem;
 `;
 
-const PrimaryText = styled.h2`
-  text-align: center;
-  font-size: 3rem;
+const PrimaryText = styled.h1`
+  text-align: ${props => props.align || "center"};
+  font-size: 3rem !important;
   font-weight: 600 !important;
-  color: ${globalColors.PrimaryBlue};
-  border-bottom: 1px solid ${globalColors.SecondaryRed};
-  border-right: 1px solid ${globalColors.SecondaryRed};
-  border-bottom: ${props => props.border || "" };
-  border-right: ${props => props.border|| "" };
+  color: ${globalColors.PrimaryGrey};
+  border-bottom: 1px solid ${globalColors.SecondaryGrey};
+  border-right: 1px solid ${globalColors.SecondaryGrey};
+  border-bottom: ${props => props.border || ""};
+  border-right: ${props => props.border || ""};
+  padding: 0.5rem;
 `;
 
 const SecondaryText = styled.h3`
+  @import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
+  font-family: 'Bungee Shade', cursive !important;
+
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400 !important;
-  color: ${globalColors.PrimaryBlue};
-  border-bottom: 1px solid ${globalColors.PrimaryRed};
-  border-top: 1px solid ${globalColors.PrimaryRed};
-  border-bottom: ${props => props.border || "" };
-  border-top: ${props => props.border || "" };
+  color: ${globalColors.PrimaryRed};
+  /* border-bottom: 1px solid ${globalColors.PrimaryRed};
+  border-top: 1px solid ${globalColors.PrimaryRed}; */
+  border-bottom: ${props => props.border || ""};
+  border-top: ${props => props.border || ""};
 `;
 
 export default Design;

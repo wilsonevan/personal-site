@@ -25,7 +25,7 @@ class Overview extends React.Component {
               <Header>Rapid Prototype Development</Header>
             </Link>
             <Link to="/user-experience">
-              <Header>UX Design & Analysis</Header>
+              <Header>User Experience Design & Analysis</Header>
             </Link>
             <Link to="/support">
               <Header>Technical Product Support</Header>
