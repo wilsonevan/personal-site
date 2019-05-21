@@ -35,7 +35,7 @@ const Design = () => {
         <SectionContainer>
           {/* <InnerContainer> */}
           <RightTextContainer>
-            <PrimaryText>UI/UX Makeovers</PrimaryText>
+            <PrimaryText border={"none"}>UI/UX Makeovers</PrimaryText>
           </RightTextContainer>
           <ComparisonContainer>
             <OneSideContainer>
@@ -66,6 +66,7 @@ const PageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: ${globalColors.PrimaryWhite}; */
 `;
 
 const SectionContainer = styled.div`
@@ -74,7 +75,7 @@ const SectionContainer = styled.div`
   align-items: center;
   min-height: 60vh;
   width: 100vw;
-  border-bottom: ${globalColors.PrimaryOrange};
+  border-bottom: ${globalColors.SecondaryOrange};
   border-bottom-width: 3px;
   border-bottom-style: solid;
   flex-wrap: wrap;
@@ -173,16 +174,22 @@ const PrimaryText = styled.h2`
   text-align: center;
   font-size: 3rem;
   font-weight: 600 !important;
-  color: ${globalColors.PrimaryGrey};
+  color: ${globalColors.PrimaryBlue};
+  border-bottom: 1px solid ${globalColors.SecondaryRed};
+  border-right: 1px solid ${globalColors.SecondaryRed};
+  border-bottom: ${props => props.border || "" };
+  border-right: ${props => props.border|| "" };
 `;
 
 const SecondaryText = styled.h3`
   text-align: center;
   font-size: 2rem;
   font-weight: 400 !important;
-  color: ${globalColors.PrimaryGrey};
-  border-bottom: 1px solid ${globalColors.PrimaryBlue};
+  color: ${globalColors.PrimaryBlue};
+  border-bottom: 1px solid ${globalColors.PrimaryRed};
+  border-top: 1px solid ${globalColors.PrimaryRed};
   border-bottom: ${props => props.border || "" };
+  border-top: ${props => props.border || "" };
 `;
 
 export default Design;
