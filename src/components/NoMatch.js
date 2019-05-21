@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "semantic-ui-react";
+import {globalColors} from '../styles/GlobalStyles'
 
 const NoMatch = ({ history }) => (
   <CenteredEverything>
@@ -25,7 +26,7 @@ const ButtonContainer = styled.div`
 
 const CenteredEverything = styled.div`
   height: 100vh;
-  background-color: #1c1c1c;
+  background-color: ${globalColors.PrimaryWhite};
   padding-top: 20vh;
   display: flex;
   flex-direction: column;
