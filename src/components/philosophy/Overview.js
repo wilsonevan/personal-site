@@ -24,8 +24,12 @@ class Overview extends React.Component {
             <Link to="/development">
               <Header>Rapid Prototype Development</Header>
             </Link>
-            <Header>Business Development</Header>
-            <Header>Technical Product Support</Header>
+            <Link to="/business">
+              <Header>Business Development</Header>
+            </Link>
+            <Link to="/support">
+              <Header>Technical Product Support</Header>
+            </Link>
           </InnerTextContainer>
         </PageContainer>
       </>
@@ -43,7 +47,7 @@ const Background = styled.img`
 `;
 
 const PageContainer = styled.div`
-position: relative;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -94,19 +98,6 @@ const ImagesContainer = styled.div`
   z-index: -10;
 `;
 
-const OuterTextContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  /* min-height: 60vh; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
 const InnerTextContainer = styled.div`
   /* position: relative;
   top: 25%; */
@@ -117,14 +108,8 @@ const InnerTextContainer = styled.div`
   align-items: center;
 `;
 
-const MyImage = styled.img`
-  width: 100vw;
-  height: auto;
-  opacity: 0.3;
-`;
-
 const MyPrimaryText = styled(PrimaryText)`
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   z-index: 10;
 
@@ -139,19 +124,14 @@ const Header = styled.h2`
   font-weight: 700 !important;
   color: ${globalColors.PrimaryGrey};
   margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 
   :hover {
     color: ${globalColors.PrimaryRed};
     transition: 0.2s ease-in-out;
     cursor: pointer;
   }
-`;
-
-const DisplayContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-wrap: none; */
 `;
 
 export default Overview;
