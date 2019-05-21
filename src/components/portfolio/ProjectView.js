@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
 import SkillCard from "./SkillCard";
 
 const ProjectView = props => {
+  const [show, setShow] = useState(false);
+
   return (
-    <ProjectContainer>
-      <EachProject>
+    <ProjectContainer >
+      <EachProject show={show} onClick={() => setShow(true)}>
         <ProjectDetails>
           {props.logo && <Logo src={props.logo} alt="CCLogo" />}
           <ProjectHeader>{props.title}</ProjectHeader>
@@ -65,7 +67,6 @@ const ProjectContainer = styled.div`
   box-shadow: 0 3px 3px 3px rgba(100, 100, 100, 0.1);
   background-color: ${globalColors.PrimaryWhite};
 
-
   :hover {
     background-color: ${globalColors.SecondaryBlue};
     transition: background-color 0.2s linear;
@@ -74,18 +75,18 @@ const ProjectContainer = styled.div`
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     /* padding: 0.2rem; */
     height: 25rem;
-  width: 25rem;
+    width: 25rem;
   }
 `;
 
 const EachProject = styled.div`
-  display: flex;
+  display: ${props => (props.show ? "none" : "flex") || "flex"};
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
   ${ProjectContainer}:hover & {
-    display: none;
+    display: ${props => props.show || "none"};
   }
 `;
 
