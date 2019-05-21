@@ -177,8 +177,8 @@ const PrimaryText = styled.h1`
   font-size: 3rem !important;
   font-weight: 600 !important;
   color: ${globalColors.PrimaryGrey};
-  border-bottom: 1px solid ${globalColors.SecondaryGrey};
-  border-right: 1px solid ${globalColors.SecondaryGrey};
+  border-bottom: 1px solid ${globalColors.SecondaryBlue};
+  border-right: 1px solid ${globalColors.SecondaryBlue};
   border-bottom: ${props => props.border || ""};
   border-right: ${props => props.border || ""};
   padding: 0.5rem;
