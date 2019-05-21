@@ -12,13 +12,11 @@ class Overview extends React.Component {
     return (
       <>
         <PageContainer>
-          <ImagesContainer>
-            <Background
-              src={BGImage}
-              alt="LinesBGImage"
-              onLoad={() => this.props.updateLoader(3)}
-            />
-          </ImagesContainer>
+          <Background
+            src={BGImage}
+            alt="LinesBGImage"
+            onLoad={() => this.props.updateLoader(3)}
+          />
           <InnerTextContainer>
             <MyPrimaryText>What I do</MyPrimaryText>
             <Link to="/development">
@@ -60,6 +58,7 @@ const PageContainer = styled.div`
   border-bottom-width: 3px;
   border-bottom-style: solid;
 
+
 /*   
   filter: blur(8px);
   -webkit-filter: blur(8px); */
@@ -74,7 +73,7 @@ const PageContainer = styled.div`
   /* background-color: ${globalColors.SecondaryGrey}; */
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    padding-bottom: 2rem;
+    /* padding-bottom: 2rem; */
   }
 `;
 
@@ -86,17 +85,17 @@ const PageContainer = styled.div`
 //   z-index: -1;
 // `;
 
-const ImagesContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  /* min-height: 60vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -10;
-`;
+// const ImagesContainer = styled.div`
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100vw;
+//   /* min-height: 60vh; */
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: -10;
+// `;
 
 const InnerTextContainer = styled.div`
   /* position: relative;
@@ -131,6 +130,11 @@ const Header = styled.h2`
     color: ${globalColors.PrimaryRed};
     transition: 0.2s ease-in-out;
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
   }
 `;
 

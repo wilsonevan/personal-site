@@ -26,7 +26,7 @@ class ContactView extends React.Component {
 const Background = styled.img`
   position: absolute;
   width: 100vw;
-  min-height: 80vh;
+  min-height: 100vh;
   opacity: 0.1;
   /* z-index: -1; */
 `;
