@@ -63,8 +63,9 @@ const Background = styled.img`
   position: absolute;
   width: 100vw;
   min-height: 100vh;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
+  background-color: white;
 `;
 
 const ProjectsContainer = styled(SecondContainer)`

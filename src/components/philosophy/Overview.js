@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { PrimaryText } from "../../styles/GlobalComponents";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
-import BGImage from "../../images/philosophy-section-background.png";
-import Image1 from "../../images/architecture-black-and-white-buildings-1437493.jpg";
+import BGImage from "../../images/architecture-black-and-white-buildings-1437493.jpg";
 // import Image2 from "../../images/architecture-black-and-white-buildings-1437493.jpg";
 // import Image3 from "../../images/adult-architecture-buildings-380283.jpg";
 
@@ -13,30 +12,35 @@ class Overview extends React.Component {
     return (
       <>
         <PageContainer>
-          <MyPrimaryText>What I do</MyPrimaryText>
-          <DisplayContainer>
-            <ImagesContainer>
-              <MyImage
-                src={Image1}
-                alt="skylineImage"
-                onLoad={() => this.props.updateLoader(2)}
-              />
-            </ImagesContainer>
-            <OuterTextContainer>
-              <InnerTextContainer>
-                <Link to="/development">
-                <Header>Rapid Prototype Development</Header>
-                </Link>
-                <Header>Business Development</Header>
-                <Header>Technical Product Support</Header>
-              </InnerTextContainer>
-            </OuterTextContainer>
-          </DisplayContainer>
+          <ImagesContainer>
+            <Background
+              src={BGImage}
+              alt="LinesBGImage"
+              onLoad={() => this.props.updateLoader(3)}
+            />
+          </ImagesContainer>
+          <InnerTextContainer>
+            <MyPrimaryText>What I do</MyPrimaryText>
+            <Link to="/development">
+              <Header>Rapid Prototype Development</Header>
+            </Link>
+            <Header>Business Development</Header>
+            <Header>Technical Product Support</Header>
+          </InnerTextContainer>
         </PageContainer>
       </>
     );
   }
 }
+
+const Background = styled.img`
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  min-height: 100vh;
+  opacity: 0.4;
+  z-index: -10;
+`;
 
 const PageContainer = styled.div`
 position: relative;
@@ -44,18 +48,14 @@ position: relative;
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   height: 100%;
   border-bottom: ${globalColors.SecondaryOrange};
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  padding-top: 3rem;
-  padding-bottom: 8rem;
 
-  /* background-image: url(${BGImage}); */
-  /* opacity: 0.5; */
 /*   
   filter: blur(8px);
   -webkit-filter: blur(8px); */
@@ -64,9 +64,9 @@ position: relative;
   /* height: 100%;  */
 
   /* Center and scale the image nicely */
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   /* background-color: ${globalColors.SecondaryGrey}; */
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
@@ -110,6 +110,7 @@ const OuterTextContainer = styled.div`
 const InnerTextContainer = styled.div`
   /* position: relative;
   top: 25%; */
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,9 +134,11 @@ const MyPrimaryText = styled(PrimaryText)`
 `;
 
 const Header = styled.h2`
+  text-align: center;
   font-size: 4rem !important;
   font-weight: 700 !important;
   color: ${globalColors.PrimaryGrey};
+  margin: 0;
 
   :hover {
     color: ${globalColors.PrimaryRed};
