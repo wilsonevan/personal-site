@@ -35,7 +35,4 @@ const CenteredEverything = styled.div`
   cursor: pointer;
 `;
 
-// const Header = styled.h1`
-// `
-
 export default NoMatch;
