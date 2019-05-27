@@ -108,6 +108,7 @@ const DesignHeader = styled.h1`
 const ImageContainer = styled.div`
   /* width: 50vw;
   height: auto; */
+  width: auto;
   margin: 0.5rem;
 `;
 
@@ -115,7 +116,10 @@ const ComparisonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap-reverse;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    flex-wrap: wrap-reverse;
+  }
 `;
 
 const OneSideContainer = styled.div`
@@ -167,7 +171,6 @@ const RightTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
   margin: 1rem;
 `;
 
@@ -175,6 +178,10 @@ const VSContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    width: 100%;
+  }
 `;
 
 const PrimaryText = styled.h1`
@@ -187,6 +194,8 @@ const PrimaryText = styled.h1`
   border-bottom: ${props => props.border || ""};
   border-right: ${props => props.border || ""};
   padding: 0.5rem;
+  width: 25rem;
+
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     text-align: center;
