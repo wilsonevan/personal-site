@@ -17,6 +17,10 @@ const CardContainer = styled.div`
   padding: 0.5rem 1rem 0.5rem 1rem;
   opacity: 0.8;
   background-color: ${globalColors.PrimaryGreen};
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    margin: 0.3rem;
+  }
+  
 `;
 
 const CardText = styled.h3`

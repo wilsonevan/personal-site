@@ -33,7 +33,7 @@ const OuterSkillsContainer = styled.div`
   margin: 0.5rem;
   min-height: 20rem;
   min-width: 50vw;
-  width: 50rem;
+  width: 30rem;
 
   border-top: 1px solid ${globalColors.SecondaryBlue};
   border-left: 1px solid ${globalColors.SecondaryBlue};
@@ -45,6 +45,7 @@ const OuterSkillsContainer = styled.div`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     max-width: none;
+    width: 80vw;
   }
 `;
 
@@ -53,7 +54,8 @@ const InnerSkillsContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-`
+  text-align: center;
+`;
 
 const MySecondaryText = styled(SecondaryText)`
   margin: 0;
