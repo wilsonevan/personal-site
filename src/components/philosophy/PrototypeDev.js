@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { PrimaryText } from "../../styles/GlobalComponents";
 import { globalColors, globalSizes } from "../../styles/GlobalStyles";
-import BGImage from "../../images/philosophy-section-background.png";
+import BGImage from "../../images/philosophy-section-background-transparent.png";
 import CircleOverview from "./CircleOverview";
 import Skills from "./Skills";
 import SoftSkills from "./SoftSkills";
@@ -10,7 +10,7 @@ import SoftSkills from "./SoftSkills";
 const Overview = props => {
   return (
     <>
-      <Background src={BGImage} alt="LinesBGImage" />
+      {/* <Background src={BGImage} alt="LinesBGImage" /> */}
       <PageContainer>
         <MyPrimaryText>Rapid Development</MyPrimaryText>
         <DisplayContainer>
@@ -37,7 +37,8 @@ const PageContainer = styled.div`
   padding-top: 3rem;
   /* padding-bottom: 8rem; */
 
-  /* background-image: url(${BGImage}); */
+  background-image: url(${BGImage});
+  background-color: rgba(255,255,255,1) !important;
   /* opacity: 0.5; */
 /*   
   filter: blur(8px);
@@ -48,7 +49,7 @@ const PageContainer = styled.div`
 
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: repeat;
+  /* background-repeat: repeat; */
   background-size: cover;
   /* background-color: ${globalColors.SecondaryGrey}; */
 
@@ -66,7 +67,7 @@ const SkillsContainer = styled.div`
 
 const Background = styled.img`
   position: absolute;
-  width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
   max-height: 100vh;
   opacity: 0.2;
@@ -84,6 +85,7 @@ const MyPrimaryText = styled(PrimaryText)`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     margin-bottom: 1rem;
+    font-size: 2rem !important;
   }
 `;
 

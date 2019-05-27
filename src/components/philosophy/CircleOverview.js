@@ -161,7 +161,7 @@ const CircleLabel = styled.h2`
   } */
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -289,6 +289,7 @@ const ExperienceContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* z-index: 10; */
 `;
 
 const Logo = styled.img`
