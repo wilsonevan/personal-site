@@ -98,6 +98,11 @@ const DesignHeader = styled.h1`
   padding-top: 3rem;
   padding-bottom: 1rem;
   text-align: center;
+
+  @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    text-align: center;
+    font-size: 2.5rem !important;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -110,7 +115,7 @@ const ComparisonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 `;
 
 const OneSideContainer = styled.div`
@@ -185,6 +190,7 @@ const PrimaryText = styled.h1`
 
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     text-align: center;
+    font-size: 2rem !important;
   }
 `;
 
@@ -204,6 +210,7 @@ const SecondaryText = styled.h3`
   @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
     margin-right: ${props => props.margin || 0};
     margin-left: ${props => props.margin || 0};
+    font-size: 1.8rem !important;
   }
 `;
 
